@@ -1,7 +1,11 @@
 // estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
+export const maping = (data) => {
+ let posters = data.map(poster => {
+   return {
+     
+   }
+ })
 };
 
 export const anotherExample = () => {
