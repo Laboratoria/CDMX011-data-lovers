@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="icon" type="image/png" href="https://image.flaticon.com/icons/png/512/188/188993.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img id="logoImg" src="https://cdn2.bulbagarden.net/upload/4/4b/Pok%C3%A9dex_logo.png" alt="LogoPokemon">
+      </div>
+      <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="https://pokemongolive.com/es_mx/">Juego Pokémon Go</a>
+      </nav>
+    </div>
+
+  </header>
+  <main>
+    <div>
+      <Form>
+        <!---->
+        <label for="ordenar">Ordenar: </label>
+        <select name="ordenar">
+          <option disabled="" selected>Selecciona una opción</option>
+          <option value="number">Por número</option>
+          <option value="ascendente">A - Z</option>
+          <option value="adultos">Z - A</option>
+        </select>
+        <!---->
+        <label for="visualizar">Ver: </label>
+        <select name="visualizar">
+          <option disabled="" selected>Selecciona una opción</option>
+          <option value="todos">Todos los pókemon</option>
+          <option value="planta">Pokémon tipo planta</option>
+          <option value="veneno">Pokémon tipo veneno</option>
+          <option value="fuego">Pokémon tipo fuego</option>
+          <option value="volador">Pokémon tipo volador</option>
+          <option value="agua">Pokémon tipo agua</option>
+          <option value="insecto">Pokémon tipo insecto</option>
+          <option value="normal">Pokémon tipo normal</option>
+          <option value="electrico">Pokémon tipo eléctrico</option>
+          <option value="tierra">Pokémon tipo tierra</option>
+          <option value="hada">Pokémon tipo haga</option>
+          <option value="lucha">Pokémon tipo lucha</option>
+          <option value="roca">Pokémon tipo roca</option>
+          <option value="acero">Pokémon tipo acero</option>
+          <option value="hielo">Pokémon tipo hielo</option>
+          <option value="psiquico">Pokémon tipo psíquico</option>
+          <option value="veneno">Pokémon tipo veneno</option>
+          <option value="fantasma">Pokémon tipo fantasma</option>
+          <option value="dragon">Pokémon tipo dragon</option>
+        </select>
+      </Form>
+    </div>
+  </main>
+
+
+  <!--<div id="root"></div>-->
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
