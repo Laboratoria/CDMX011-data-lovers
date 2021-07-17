@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-console.log(data.pokemon[0].name); //Accedemos al primer pokemon y su tipo
+//console.log(data.pokemon[0].name); //Accedemos al primer pokemon y su tipo
 
 
 //--------------------------------Lista de type pokémon--------------------------------------
@@ -35,12 +35,15 @@ bloque.appendChild(crearSelectType);
     "Lucha",
     "Dragon"
 ];*/
+//inicializa la variable que sera el nuevo set de datos irrepetibles
 let typePokemon = new Set();
-
+//aqui se iteran los datos de tipo de pokemon con un forEach donde pokemonActual tiene la lista donde solo estan los tipos de pokemon, 
 data.pokemon.forEach(pokemonActual => {
     //console.log(pokemonActual.type)
+    //Aqui vuelve a iterar la lista para sacar cada tipo de pokemon aunque la lista este repetida
     pokemonActual.type.forEach(tipos => {
         //console.log(tipos);
+        //Agrega la lista con los tipos de pokemon repetidos y creara una nueva agregando los tipos sin repetirlos
         typePokemon.add(tipos);
         //console.log(pokemonType);
     })
@@ -48,6 +51,7 @@ data.pokemon.forEach(pokemonActual => {
 console.log(typePokemon);
 
 //Agregando nuestros "Options" a nuestro "Select"
+//Otro forEach a los tipos de pokemon para iterar la lista, despues crea el elemento 
 typePokemon.forEach(tipos => {
         let type = document.createElement("option");
         incremento++;
@@ -73,18 +77,34 @@ divOrden.appendChild(crearSelectOrder);
 //Bicho, Dragón, Eléctrico, Hada, Lucha, Fuego, Volador, Fantasma, Planta, Tierra, Hielo, Normal, Veneno, Psíquico, Roca, Acero y Agua.
 
 //Llenando el arreglo que contendrá los "Options" de nuestro "Select"
-const orderOptions = [
+let orderRegion = new Set();
+data.pokemon.forEach(actual => {
+    actual.generation.name
+    console.log(actual.generation.name)
+    orderRegion.add(actual.generation.name)
+
+})
+
+
+/*const orderOptions = [
     "Número",
     "Ascendente",
     "Descendente"
-];
+];*/
 
 
 //Agregando nuestros "Options" a nuestro "Select"
-for (let j = 0; j < orderOptions.length; j++) {
-    let organiza = document.createElement("option");
-    incrementoOrder++;
-    organiza.value = orderOptions[j];
-    organiza.text = orderOptions[j];
-    crearSelectOrder.appendChild(organiza);
-}
+orderRegion.forEach(regionActual => {
+        let region = document.createElement("option");
+        incrementoOrder++;
+        region.value = regionActual;
+        region.text = regionActual;
+        crearSelectOrder.appendChild(region);
+    })
+    /*for (let j = 0; j < orderOptions.length; j++) {
+        let organiza = document.createElement("option");
+        incrementoOrder++;
+        organiza.value = orderOptions[j];
+        organiza.text = orderOptions[j];
+        crearSelectOrder.appendChild(organiza);
+    }*/
