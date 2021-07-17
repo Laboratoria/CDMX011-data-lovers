@@ -1,21 +1,74 @@
-/*import { example } from './data.js';
+
 
 import data from './data/pokemon/pokemon.js';
+console.log(data.pokemon[0].name);//Accedemos al primer pokemon y su tipo
 
 
-console.log(example, data);*/
+//--------------------------------Lista de type pokémon--------------------------------------
 
-/* Leerlo con fetch
-fetch('http://localhost:5000/data/pokemon/pokemon.json')
-    .then(res => res.json())
-    .then(pokemon => {
-        console.log(pokemon.pokemon);
 
-    })
-    .catch(e => {
-        console.log("error", e)
-    })
-*/
+let bloque = document.getElementById('selectorType')
+//Creando el Select que irá dentro del Div "productos"
+let crearSelectType = document.createElement('select');
+let incremento = 0;
+crearSelectType.id = 'select' + incremento;
+bloque.appendChild(crearSelectType);
 
-import data from './data/pokemon/pokemon.js';
-console.log(data.pokemon[0].type);//Accedemos al primer pokemon y su tipo
+//Bicho, Dragón, Eléctrico, Hada, Lucha, Fuego, Volador, Fantasma, Planta, Tierra, Hielo, Normal, Veneno, Psíquico, Roca, Acero y Agua.
+
+//Llenando el arreglo que contendrá los "Options" de nuestro "Select"
+const typePokemon = [
+    "Todos",
+    "Fuego",
+    "Agua",
+    "Roca",
+    "Normal",
+    "Hielo",
+    "Eléctrico",
+    "Fantasma",
+    "Hada",
+    "Psíquico",
+    "Tierra",
+    "Volador",
+    "Bicho",
+    "Planta",
+    "Veneno",
+    "Acero",
+    "Lucha",
+    "Dragon"
+];
+
+//Agregando nuestros "Options" a nuestro "Select"
+for (let i = 0; i < typePokemon.length; i++) {
+    let type = document.createElement("option");
+    incremento++;
+    type.value = typePokemon[i];
+    type.text = typePokemon[i];
+    crearSelectType.appendChild(type);
+}
+//--------------------------------------Ordenar pokémon---------------------------------------------------------
+let divOrden = document.getElementById('selectorOrder')
+//Creando el Select que irá dentro del Div "productos"
+let crearSelectOrder = document.createElement('select');
+let incrementoOrder = 0;
+crearSelectOrder.id = 'select' + incrementoOrder;
+divOrden.appendChild(crearSelectOrder);
+
+//Bicho, Dragón, Eléctrico, Hada, Lucha, Fuego, Volador, Fantasma, Planta, Tierra, Hielo, Normal, Veneno, Psíquico, Roca, Acero y Agua.
+
+//Llenando el arreglo que contendrá los "Options" de nuestro "Select"
+const orderOptions = [
+    "Número",
+    "Ascendente",
+    "Descendente"
+];
+
+
+//Agregando nuestros "Options" a nuestro "Select"
+for (let j = 0; j < orderOptions.length; j++) {
+    let organiza = document.createElement("option");
+    incrementoOrder++;
+    organiza.value = orderOptions[j];
+    organiza.text = orderOptions[j];
+    crearSelectOrder.appendChild(organiza);
+}
