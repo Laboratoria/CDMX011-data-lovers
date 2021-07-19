@@ -1,0 +1,93 @@
+*{
+    text-decoration: none;    
+}
+
+body{
+    background-color: #E9EFDE;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0D566D;      
+    font-family: 'Gayathri', sans-serif;
+    height: 2vw;
+    margin-bottom: 0vw;
+}
+
+
+.menu{
+    display: flex;    
+    justify-content:space-evenly;    
+    background-color: #C28800;
+    padding: 1vw;        
+    font-family: 'Gayathri', sans-serif;    
+    color: #F9FFED;
+    list-style: none;
+}
+
+.menu a {
+    color: #F9FFED;    
+}
+
+.films{
+    display:none;    
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    text-align: center; 
+       
+}
+
+.aboutText{
+    font-family: 'Gayathri', sans-serif;
+    width: 100vw;
+    margin-top: 10vw;    
+}
+
+.home{
+    width: 90%;    
+    background-color: #E9EFDE;
+    background-size: cover;
+}
+
+/* For device width 990px and larger: */
+@media only screen and (min-device-width: 990px) {
+.home{
+    width: 100%;
+    height: 500px;
+    background-image: url("https://i.ibb.co/TDQZk6p/Fondo-Totoro.jpg");
+    background-size: cover;
+}
+.aboutText{
+    font-family: 'Gayathri', sans-serif;
+    font-size: 2vw;
+    width: 60vw;
+    margin-top: 10vw;       
+}
+
+.aboutTitle{    
+    color: #0D566D;
+    font-size: 3.5vw;
+    font-family: 'Gayathri', sans-serif; 
+    margin-left: 8vw;    
+}
+}
+
+footer{
+    display:flex;    
+    justify-content:space-evenly;
+    text-align: center;  
+}
+
+footer a {
+    color: #F9FFED;
+}
+.website{
+    font-size: 1vw;
+    font-family: 'Gayathri', sans-serif;
+    text-decoration: none;
+    background-color: #9E3797;    
+    padding: 10px 6px 10px 6px;
+    
+}

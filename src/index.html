@@ -2,10 +2,40 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Data Lovers - Studio Ghibli</title>
+    <link rel="stylesheet" href="style.css" /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">    
   </head>
   <body>
+    <header> 
+      <h1>Ghibli World</h1>
+      <nav>
+        <ul class="menu">
+          <li><a  href="#" class="home_button">Home</a></li>
+          <li><a href="#" class="movies_button">Filmography</a></li>
+          <li><a href="#">Characters</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="home" id="home">
+        <h2 class="aboutTitle">About Studio Ghibli</h2>
+        <p class="aboutText">It is a Japanese animation film studio headquartered in Koganei, Tokyo. Founded in 1985 by animators and directors Miyazaki Hayao and Takahata Isao and producer Suzuki Toshio. Studio Ghibli is known for the high quality of its filmmaking and its artistry. Its feature films won both critical and popular praise and influenced other animation studios.</p>
+      </div>
+      <div class= "films" id ="films">
+        <div id="description">
+          Descripción de la película
+          <span id="movieData"></span>
+        </div> 
+      </div>      
+    </main>
+    <footer>      
+      <p class="website"><a href="https://www.ghibli.jp/">Studio Ghibli's Official Website</a></p>
+      <p class="website"><a href="https://twitter.com/JP_GHIBLI">Studio Ghibli's official Twitter account</a></p>
+      <p class="website"><a href="https://www.ghibli-museum.jp">Studio Ghibli Museum</a></p>
+    </footer> 
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
