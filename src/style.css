@@ -1,7 +1,9 @@
 body {
+    font-family: 'Balsamiq Sans', cursive;
+/*font-family: 'Chakra Petch', sans-serif;*/
     background-image: url('https://i.pinimg.com/originals/fa/a2/a4/faa2a4a8f25471ccb5e9527eb5c09564.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-repeat: no-repeat; /*repeat*/
+    background-attachment:fixed;/*imagen de nubes quede fija*/
 }
 
 .header {
@@ -18,7 +20,7 @@ body {
 
 .container {
     width: 95%;
-    max-width: 1500px;
+    max-width: 1800px;
     margin: auto;
 }
 
