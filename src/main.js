@@ -64,19 +64,26 @@ orderRegion.forEach(regionActual => {
     crearSelectOrder.appendChild(region);
 })
 //-------------------------Mostrar Pokemon---------------------------------
-let contenedor = document.getElementById("containerPokemon");
+//let contenedor = document.getElementById("containerPokemon");
+let contenedor = document.querySelector("#containerPokemon");
 
 
-
-//crear un for
-//let nombreNum = "";
 data.pokemon.forEach(pokemonActual => {
+
     let mostrarPokemon = document.createElement("div");
     mostrarPokemon.id = pokemonActual.num + " " + pokemonActual.name;
+    mostrarPokemon.setAttribute("class", "pokeDiv");
+    console.log("la clase del pokemon es:", mostrarPokemon);
     contenedor.appendChild(mostrarPokemon)
+
     let mostrarImg = document.createElement("img");
     mostrarImg.src = pokemonActual.img;
+    mostrarImg.setAttribute("class", "pokeImg");
+    //mostrarImg.className = "pokeImg";
+    console.log(mostrarImg);
     mostrarPokemon.appendChild(mostrarImg)
+
+
     let tituloImg = document.createElement("h4");
     tituloImg.innerHTML = pokemonActual.num + " " + pokemonActual.name;
     mostrarPokemon.appendChild(tituloImg);
@@ -84,4 +91,3 @@ data.pokemon.forEach(pokemonActual => {
     console.log(contenedor);
 
 });
-console.log(contenedor);
