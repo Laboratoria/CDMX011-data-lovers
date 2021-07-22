@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <!--Header contiene logo y enlaces-->
     <header class="header">
         <div class="container">
             <div class="logo">
@@ -26,16 +27,21 @@
             </nav>
         </div>
     </header>
+
+    <!--Main contiene instrucciones,sección de busqueda y orden-->
     <main>
-        <div class="seleccion">
-            <h2>¡¡Da click sobre el pokémon para ver más características!! </h2>
-            <div id="selectorType">Ver pokémon:</div>
-
-            <div id="selectorOrder">Ordenar por:</div>
-
+        <div id="main">
+            <div class="seleccion">
+                <h2 id="instructions">¡¡Da click sobre el pokémon para ver más características!! </h2>
+                <div id="selectorType">Ver pokémon:</div>
+                <div id="selectorOrder">Ordenar por:</div>
+            </div>
         </div>
     </main>
-    <div id="containerPokemon"></div>
+
+    <!--Sección que contiene pokemon, mostrando imagen, número y nombre-->
+    <section id="containerPokemon"></section>
+    <!--  <div id="containerPokemon"></div>-->
 
     <!--<div id="root"></div>-->
     <script src="main.js" type="module"></script>

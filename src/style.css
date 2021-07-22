@@ -1,17 +1,18 @@
 body {
     font-family: 'Balsamiq Sans', cursive;
-/*font-family: 'Chakra Petch', sans-serif;*/
+    /*font-family: 'Chakra Petch', sans-serif;*/
     background-image: url('https://i.pinimg.com/originals/fa/a2/a4/faa2a4a8f25471ccb5e9527eb5c09564.jpg');
-    background-repeat: no-repeat; /*repeat*/
+    background-size: cover;/*cubrir todo el espacio con la imagen*/
+    background-repeat: no-repeat; /*fondo no se repita*/
     background-attachment:fixed;/*imagen de nubes quede fija*/
 }
 
 .header {
     width: 100%;
-    height: 6em;
-    background-color: #d54c4c;
+    height: 10.5%;
+    background-color: #f32020cb;
     position: fixed;
-    z-index: 10;
+    z-index: 1;
     /*Para que este encima por los demas contenedores*/
     top: 0;
     left: 0;
@@ -30,8 +31,8 @@ body {
 }
 
 #logoImg {
-    width: 200px;
-    left: 300px;
+    width: 50%;
+    left: 45%;
 }
 
 .menu {
@@ -55,6 +56,70 @@ body {
     border-bottom: 4px solid #dfb11a;
 }
 
+#main{
+    background-color: blue;
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    height: 22%;
+    /*z-index: 1;*/
+    /*Para que este encima por los demas contenedores*/
+    top: 7em;
+    left: 0;
+}
+    
+
+/*cambio en titulo2 con id= instructions*/
+
+#instructions{
+    color:#215cd3;
+    text-align: center;
+    padding: 3% 20%;
+    
+    
+
+}
+
+
 .seleccion {
-    margin-top: 10rem;
+    width:80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius:10px;
+    background-color: #40e9a3;
+    /*position: fixed;
+  
+    /*justify-content: center;
+    align-items: center;
+    flex-direction: row;*/
+}/*
+
+/*Contenedor de todos los div pokemon*/
+.containerPokemon{
+  
+   background-color: rgb(26, 46, 46);
+}
+/*div contenedores de imagen, número y nombre de los pokémon*/
+.pokeDiv{
+
+    display:inline-block;
+    text-align:center;
+    color:#1748A7;
+}
+/*imágenes de pokémon en pantalla*/
+.pokeImg{
+    display:block;
+    width: 8em;
+    height: 8em;
+    padding:2em 2em 0em 2em;
+    transition: 0.5s ease-in-out;
+    
+}
+.pokeImg:hover{
+    display:block;
+    
+    padding:2em 2em 0em 2em;
+    filter:drop-shadow 0 0.5em 0.8em -0.2em #c5d86d;
+    filter: drop-shadow(0 4px 7px #0f24e0);
 }
