@@ -7,41 +7,59 @@ export const getPokemonTypes = () => {
             typePokemon.add(types); //Agrega la lista con los tipos de pokemon repetidos y creara una nueva agregando los tipos sin repetirlos
         })
     })
-    return typePokemon
+    return typePokemon;
+}
+
+export const getPokemonRegion = () => {
+    let orderRegion = new Set();
+    data.pokemon.forEach(actualPokemon => {
+        actualPokemon.generation.name;
+        //console.log(actual.generation.name)
+        orderRegion.add(actualPokemon.generation.name);
+    })
+    return orderRegion;
 }
 
 export const filterTypes = (pokemonType) => {
     const resultFilter = data.pokemon.filter(pokemon => {
         if (pokemon.type.includes(pokemonType)) {
-            return true
+            return true;
         }
     })
-    return resultFilter
+    return resultFilter;
 }
 
-export const showPokemonTypes = () => {
-    let contenedor = document.getElementById("containerPokemon");
-    data.pokemon.forEach(pokemonActual => {
-
-        let mostrarPokemon = document.createElement("div");
-        //mostrarPokemon.id = pokemonActual.num + " " + pokemonActual.name;
-        mostrarPokemon.setAttribute("class", "pokeDiv");
-        //console.log("la clase del pokemon es:", mostrarPokemon);
-        contenedor.appendChild(mostrarPokemon)
-
-        let mostrarImg = document.createElement("img");
-        mostrarImg.src = pokemonActual.img;
-        mostrarImg.setAttribute("class", "pokeImg");
-        //mostrarImg.className = "pokeImg";
-        //console.log(mostrarImg);
-        mostrarPokemon.appendChild(mostrarImg)
-
-
-        let tituloImg = document.createElement("h4");
-        tituloImg.innerHTML = pokemonActual.num + " " + pokemonActual.name;
-        mostrarPokemon.appendChild(tituloImg);
-
-        //console.log(contenedor);
-
-    });
+export const filterRegion = (pokemonActual) => {
+    const resultRegion = data.pokemon.filter(pokemon => {
+        if (pokemon.generation.name.includes(pokemonActual)) {
+            return true;
+        }
+    })
+    return resultRegion;
 }
+
+export const createPokemonTypes = (pokemonActual) => {
+    let contenedor = document.querySelector("#containerPokemon");
+    let mostrarPokemon = document.createElement("div");
+    mostrarPokemon.setAttribute("class", "pokeDiv");
+    //console.log("la clase del pokemon es:", mostrarPokemon);
+    contenedor.appendChild(mostrarPokemon);
+
+    let mostrarImg = document.createElement("img");
+    mostrarImg.src = pokemonActual.img;
+    mostrarImg.setAttribute("class", "pokeImg");
+    //mostrarImg.className = "pokeImg";
+    //console.log(mostrarImg);
+    mostrarPokemon.appendChild(mostrarImg);
+
+    let tituloImg = document.createElement("h4");
+    let namePokemon = pokemonActual.name;
+    let initialName = namePokemon.charAt(0).toUpperCase();
+    let restName = namePokemon.slice(1);
+    let resultName = initialName + restName;
+    /*Mostramos el número + nombre en pantalla*/
+    tituloImg.innerHTML = pokemonActual.num + " " + resultName;
+    mostrarPokemon.appendChild(tituloImg);
+    //console.log(contenedor);
+
+};
