@@ -1,8 +1,7 @@
 import data from './data/pokemon/pokemon.js';
 
 
-
-//--------------------------------Lista de type pokémon--------------------------------------
+//--------------------------------Creación de lista Type pokémon--------------------------------------
 
 
 let bloque = document.getElementById('selectorType')
@@ -17,16 +16,14 @@ bloque.appendChild(crearSelectType);
 let typePokemon = new Set();
 //aqui se iteran los datos de tipo de pokemon con un forEach donde pokemonActual tiene la lista donde solo estan los tipos de pokemon, 
 data.pokemon.forEach(pokemonActual => {
-    //console.log(pokemonActual.type)
     //Aqui vuelve a iterar la lista para sacar cada tipo de pokemon aunque la lista este repetida
     pokemonActual.type.forEach(tipos => {
-        //console.log(tipos);
         //Agrega la lista con los tipos de pokemon repetidos y creara una nueva agregando los tipos sin repetirlos
         typePokemon.add(tipos);
         //console.log(pokemonType);
     })
 })
-console.log(typePokemon);
+
 
 //Agregando nuestros "Options" a nuestro "Select"
 //Otro forEach a los tipos de pokemon para iterar la lista, despues crea el elemento 
@@ -38,7 +35,7 @@ typePokemon.forEach(tipos => {
     crearSelectType.appendChild(type);
 })
 
-//--------------------------------------Ordenar pokémon---------------------------------------------------------
+//--------------------------------------Creación de Ordenar pokémon por generación---------------------------------------------------------
 let divOrden = document.getElementById('selectorOrder')
 //Creando el Select que irá dentro del Div "productos"
 let crearSelectOrder = document.createElement('select');
@@ -68,26 +65,30 @@ orderRegion.forEach(regionActual => {
 let contenedor = document.querySelector("#containerPokemon");
 
 
-data.pokemon.forEach(pokemonActual => {
-
-    let mostrarPokemon = document.createElement("div");
-    mostrarPokemon.id = pokemonActual.num + " " + pokemonActual.name;
-    mostrarPokemon.setAttribute("class", "pokeDiv");
-    console.log("la clase del pokemon es:", mostrarPokemon);
-    contenedor.appendChild(mostrarPokemon)
-
-    let mostrarImg = document.createElement("img");
-    mostrarImg.src = pokemonActual.img;
-    mostrarImg.setAttribute("class", "pokeImg");
-    //mostrarImg.className = "pokeImg";
-    console.log(mostrarImg);
-    mostrarPokemon.appendChild(mostrarImg)
 
 
-    let tituloImg = document.createElement("h4");
-    tituloImg.innerHTML = pokemonActual.num + " " + pokemonActual.name;
-    mostrarPokemon.appendChild(tituloImg);
 
-    console.log(contenedor);
+let mostrarPokemon = document.createElement("div");
+mostrarPokemon.id = pokemonActual.num + " " + pokemonActual.name;
+mostrarPokemon.setAttribute("class", "pokeDiv");
+contenedor.appendChild(mostrarPokemon)
 
-});
+let mostrarImg = document.createElement("img");
+mostrarImg.src = pokemonActual.img;
+mostrarImg.setAttribute("class", "pokeImg");
+//mostrarImg.className = "pokeImg";
+mostrarPokemon.appendChild(mostrarImg)
+
+
+let tituloImg = document.createElement("h4");
+/*Ponemos el nombre del pokemon en mayúscula*/
+let namePokemon = pokemonActual.name;
+let initialName = namePokemon.charAt(0).toUpperCase();
+let restName = namePokemon.slice(1);
+let resultName = initialName + restName;
+/*Mostramos el número + nombre en pantalla*/
+tituloImg.innerHTML = pokemonActual.num + " " + resultName;
+mostrarPokemon.appendChild(tituloImg);
+
+console.log(contenedor);
+);
