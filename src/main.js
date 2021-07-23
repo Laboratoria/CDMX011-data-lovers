@@ -1,94 +1,66 @@
 import data from './data/pokemon/pokemon.js';
+import {
+    getPokemonTypes, filterTypes,
+    createPokemonTypes, getPokemonRegion,
+    filterRegion
+} from './data.js';
 
 
 //--------------------------------Creación de lista Type pokémon--------------------------------------
 
+let selectorType = document.getElementById('selectorType')
+let crearSelectType = document.createElement('select'); //Creando el Select que irá dentro del Div "productos"
+selectorType.appendChild(crearSelectType);
+const firstOption = document.createElement("option");
+firstOption.value = "Tipos de Pokemon";
+firstOption.text = "Tipos de Pokemon";
+crearSelectType.appendChild(firstOption);
+//document.getElementById("selectorType").addEventListener
 
-let bloque = document.getElementById('selectorType')
-//Creando el Select que irá dentro del Div "productos"
-let crearSelectType = document.createElement('select');
-let incremento = 0;
-crearSelectType.id = 'select' + incremento;
-bloque.appendChild(crearSelectType);
-
-
-//inicializa la variable que sera el nuevo set de datos irrepetibles
-let typePokemon = new Set();
-//aqui se iteran los datos de tipo de pokemon con un forEach donde pokemonActual tiene la lista donde solo estan los tipos de pokemon, 
-data.pokemon.forEach(pokemonActual => {
-    //Aqui vuelve a iterar la lista para sacar cada tipo de pokemon aunque la lista este repetida
-    pokemonActual.type.forEach(tipos => {
-        //Agrega la lista con los tipos de pokemon repetidos y creara una nueva agregando los tipos sin repetirlos
-        typePokemon.add(tipos);
-        //console.log(pokemonType);
-    })
-})
-
-
-//Agregando nuestros "Options" a nuestro "Select"
-//Otro forEach a los tipos de pokemon para iterar la lista, despues crea el elemento 
-typePokemon.forEach(tipos => {
+let pokemonTypes = getPokemonTypes() //Agregando nuestros "Options" a nuestro "Select"
+pokemonTypes.forEach(types => { //Otro forEach a los tipos de pokemon para iterar la lista, despues crea el elemento
     let type = document.createElement("option");
-    incremento++;
-    type.value = tipos;
-    type.text = tipos;
+    type.value = types;
+    type.text = types;
     crearSelectType.appendChild(type);
 })
 
 //--------------------------------------Creación de Ordenar pokémon por generación---------------------------------------------------------
-let divOrden = document.getElementById('selectorOrder')
-//Creando el Select que irá dentro del Div "productos"
-let crearSelectOrder = document.createElement('select');
-//let incrementoOrder = 0;
-//crearSelectOrder.id = 'select' + incrementoOrder;
-divOrden.appendChild(crearSelectOrder);
+let selectorRegion = document.getElementById("selectorRegion")
+let createSelectRegion = document.createElement('select'); //Creando el Select que irá dentro del Div "productos"
+selectorRegion.appendChild(createSelectRegion);
 
-//Llenando el arreglo que contendrá los "Options" de nuestro "Select"
-let orderRegion = new Set();
-data.pokemon.forEach(actual => {
-    actual.generation.name
-    console.log(actual.generation.name)
-    orderRegion.add(actual.generation.name)
-
-})
-
+let pokemonRegion = getPokemonRegion()
 //Agregando nuestros "Options" a nuestro "Select"
-orderRegion.forEach(regionActual => {
+pokemonRegion.forEach(regionActual => {
     let region = document.createElement("option");
-    //incrementoOrder++;
     region.value = regionActual;
     region.text = regionActual;
-    crearSelectOrder.appendChild(region);
+    createSelectRegion.appendChild(region);
 })
 //-------------------------Mostrar Pokemon---------------------------------
-//let contenedor = document.getElementById("containerPokemon");
-let contenedor = document.querySelector("#containerPokemon");
+//let showPokemon = data.pokemon.forEach()
+data.pokemon.forEach(pokemonActual => {
+    const showPokemon = createPokemonTypes(pokemonActual);
 
+});
 
+document.getElementById("selectorType").addEventListener("change", (event) => {
+    let data2 = filterTypes(event.target.value)
+    document.getElementById("containerPokemon").innerHTML = ""
 
+    data2.forEach(pokemonActual => {
+        const showPokemon = createPokemonTypes(pokemonActual);
+    });
 
+})
 
-let mostrarPokemon = document.createElement("div");
-mostrarPokemon.id = pokemonActual.num + " " + pokemonActual.name;
-mostrarPokemon.setAttribute("class", "pokeDiv");
-contenedor.appendChild(mostrarPokemon)
+document.getElementById("selectorRegion").addEventListener("change", (event) => {
+    let data2 = filterRegion(event.target.value)
+    document.getElementById("containerPokemon").innerHTML = ""
 
-let mostrarImg = document.createElement("img");
-mostrarImg.src = pokemonActual.img;
-mostrarImg.setAttribute("class", "pokeImg");
-//mostrarImg.className = "pokeImg";
-mostrarPokemon.appendChild(mostrarImg)
+    data2.forEach(pokemonActual => {
+        const showPokemon = createPokemonTypes(pokemonActual);
+    });
 
-
-let tituloImg = document.createElement("h4");
-/*Ponemos el nombre del pokemon en mayúscula*/
-let namePokemon = pokemonActual.name;
-let initialName = namePokemon.charAt(0).toUpperCase();
-let restName = namePokemon.slice(1);
-let resultName = initialName + restName;
-/*Mostramos el número + nombre en pantalla*/
-tituloImg.innerHTML = pokemonActual.num + " " + resultName;
-mostrarPokemon.appendChild(tituloImg);
-
-console.log(contenedor);
-);
+})
