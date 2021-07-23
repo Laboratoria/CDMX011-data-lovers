@@ -1,4 +1,5 @@
 import data from './data/pokemon/pokemon.js';
+
 import {
     getPokemonTypes, filterTypes,
     createPokemonTypes, getPokemonRegion,
@@ -31,15 +32,15 @@ let createSelectRegion = document.createElement('select'); //Creando el Select q
 selectorRegion.appendChild(createSelectRegion);
 
 let pokemonRegion = getPokemonRegion()
-//Agregando nuestros "Options" a nuestro "Select"
+    //Agregando nuestros "Options" a nuestro "Select"
 pokemonRegion.forEach(regionActual => {
-    let region = document.createElement("option");
-    region.value = regionActual;
-    region.text = regionActual;
-    createSelectRegion.appendChild(region);
-})
-//-------------------------Mostrar Pokemon---------------------------------
-//let showPokemon = data.pokemon.forEach()
+        let region = document.createElement("option");
+        region.value = regionActual;
+        region.text = regionActual;
+        createSelectRegion.appendChild(region);
+    })
+    //-------------------------Mostrar Pokemon---------------------------------
+    //let showPokemon = data.pokemon.forEach()
 data.pokemon.forEach(pokemonActual => {
     const showPokemon = createPokemonTypes(pokemonActual);
 
