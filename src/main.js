@@ -1,9 +1,11 @@
 import data from './data/pokemon/pokemon.js';
-import { getPokemonTypes } from './data.js';
-import { filterTypes } from './data.js';
-import { createPokemonTypes } from './data.js';
-import { getPokemonRegion } from './data.js';
-import { filterRegion } from './data.js';
+
+import {
+    getPokemonTypes, filterTypes,
+    createPokemonTypes, getPokemonRegion,
+    filterRegion
+} from './data.js';
+
 
 //--------------------------------Creación de lista Type pokémon--------------------------------------
 
