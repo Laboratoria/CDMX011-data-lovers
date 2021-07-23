@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
+    <title>RICKCIONARIO</title>
+    <link href='https://fonts.googleapis.com/css?family=ZCOOL KuaiLe' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+</head>
+
+<body class="content-background">
+    <header>
+        <section class="header"><img class="header-image" src="favicon.png">Rickcionario<img class="header-image" src="favicon.png"></section>
+        <nav class="flexSelector space">
+            <input class="selector" id="input" type="text" placeholder="Search character">
+            <!--<input class="button space" value="Search" type="button" id="search">-->
+            <label class="label" for="filter">Filter by:</label>
+            <select id="filter" class="selector">
+                <option value="0">Show all</option>
+                <option value="1">Alives</option>
+                <option value="2">Deads</option>
+                <option value="3">Humans</option>
+                <option value="4">Aliens</option>
+                <option value="5">Humanoid</option>
+                <option value="6">Poopybuttholes</option>
+                <option value="7">Cronenbergs</option>
+                <option value="8">Males</option>
+                <option value="9">Females</option>
+            </select>
+            <label class="label" for="sort">Sort By:</label>
+            <select id="sort" class="selector">
+                <option  value="1">Name A-Z</option>
+                <option  value="2">Name Z-A</option>
+                <option  value="3">Id upward</option>
+                <option  value="4">Id downward</option>
+                
+            </select>
+        </nav>
+    </header>
+    ​
+    <section id="characters" class="gridFather content-section"></section>
+    ​
+    <section class="gridFather">
+        <input class="button space" value="Pagina anterior" type="button" id="prev">
+        <input class="button space" value="Pagina siguiente" type="button" id="next"> ​ ​
+    </section>
     <script src="main.js" type="module"></script>
-  </body>
+</body>
+​ ​
+
 </html>
