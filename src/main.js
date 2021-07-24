@@ -1,10 +1,13 @@
 import data from './data/pokemon/pokemon.js';
 
 import {
-    getPokemonTypes, filterTypes,
-    createPokemonTypes, getPokemonRegion,
-    filterRegion
+    getPokemonTypes,
+    filterTypes,
+    createPokemonTypes,
+    getPokemonRegion,
+    filterRegion,
 } from './data.js';
+//import { types } from '@babel/core';
 
 
 //--------------------------------Creación de lista Type pokémon--------------------------------------
@@ -13,10 +16,9 @@ let selectorType = document.getElementById('selectorType')
 let crearSelectType = document.createElement('select'); //Creando el Select que irá dentro del Div "productos"
 selectorType.appendChild(crearSelectType);
 const firstOption = document.createElement("option");
-firstOption.value = "Tipos de Pokemon";
-firstOption.text = "Tipos de Pokemon";
+firstOption.value = "Todos los Pokemon";
+firstOption.text = "Todos los Pokemon";
 crearSelectType.appendChild(firstOption);
-//document.getElementById("selectorType").addEventListener
 
 let pokemonTypes = getPokemonTypes() //Agregando nuestros "Options" a nuestro "Select"
 pokemonTypes.forEach(types => { //Otro forEach a los tipos de pokemon para iterar la lista, despues crea el elemento
