@@ -38,6 +38,30 @@ const filterRegion = (pokemonActual) => {
   return resultRegion;
 }
 
+const sortPokemon = (filteredData, selectUser) => {
+  if (selectUser === "Orden ascendente") {
+    //let numerosPokemon = [];
+    //filteredData.forEach(pokemon => { numerosPokemon.push(pokemon.num) })
+    //console.log(numerosPokemon);
+
+    //console.log("hola");
+    filteredData.reverse();
+    //filteredData.sort(function (a, b) {
+    //  console.log("B", b)
+    //  return a - b
+    //}); //ascendente
+  } else if (selectUser == "Orden descendente") {
+    filteredData.reverse();
+  }
+
+
+  return filteredData;
+}
+
+
+
+
+
 const createPokemonTypes = (pokemonActual) => {
   let contenedor = document.querySelector("#containerPokemon");
   let mostrarPokemon = document.createElement("div");
@@ -64,4 +88,4 @@ const createPokemonTypes = (pokemonActual) => {
 
 };
 
-export { getPokemonTypes, getPokemonRegion, filterTypes, filterRegion, createPokemonTypes };
+export { getPokemonTypes, getPokemonRegion, filterTypes, filterRegion, createPokemonTypes, sortPokemon };

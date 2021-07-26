@@ -2,10 +2,10 @@ import data from './data/pokemon/pokemon.js';
 import {
     getPokemonTypes, filterTypes,
     createPokemonTypes, getPokemonRegion,
-    filterRegion
+    filterRegion, sortPokemon
 } from './data.js';
 
-
+let filteredData = data.pokemon;
 //--------------------------------Creación de lista Type pokémon--------------------------------------
 
 let selectorType = document.getElementById('selectorType')
@@ -38,10 +38,42 @@ pokemonRegion.forEach(regionActual => {
     region.text = regionActual;
     createSelectRegion.appendChild(region);
 })
+//--------------------------------Creación de ordenar Sort--------------------------------------
+
+let selectorSort = document.getElementById('selectorSort')
+let crearSelectSort = document.createElement('select');
+selectorSort.appendChild(crearSelectSort);
+const optionSortAscendent = document.createElement("option");
+optionSortAscendent.value = "Orden ascendente";
+optionSortAscendent.text = "Orden ascendente";
+crearSelectSort.appendChild(optionSortAscendent);
+
+const optionSortDescendent = document.createElement("option");
+optionSortDescendent.value = "Orden descendente";
+optionSortDescendent.text = "Orden descendente";
+crearSelectSort.appendChild(optionSortDescendent);
+
+document.getElementById("selectorSort").addEventListener("change", (event) => {
+    const selectUser = event.target.value;
+
+    filteredData = sortPokemon(filteredData, selectUser);
+    document.getElementById("containerPokemon").innerHTML = "";
+
+    filteredData.forEach(pokemonActual => {
+        createPokemonTypes(pokemonActual);
+
+    });
+
+})
+
+
+
+
+
 //-------------------------Mostrar Pokemon---------------------------------
 //let showPokemon = data.pokemon.forEach()
-data.pokemon.forEach(pokemonActual => {
-    const showPokemon = createPokemonTypes(pokemonActual);
+filteredData.forEach(pokemonActual => {
+    createPokemonTypes(pokemonActual);
 
 });
 
@@ -50,7 +82,7 @@ document.getElementById("selectorType").addEventListener("change", (event) => {
     document.getElementById("containerPokemon").innerHTML = ""
 
     data2.forEach(pokemonActual => {
-        const showPokemon = createPokemonTypes(pokemonActual);
+        createPokemonTypes(pokemonActual);
     });
 
 })
@@ -60,7 +92,7 @@ document.getElementById("selectorRegion").addEventListener("change", (event) => 
     document.getElementById("containerPokemon").innerHTML = ""
 
     data2.forEach(pokemonActual => {
-        const showPokemon = createPokemonTypes(pokemonActual);
+        createPokemonTypes(pokemonActual);
     });
 
 })
