@@ -2,9 +2,12 @@ body {
     font-family: 'Balsamiq Sans', cursive;
     /*font-family: 'Chakra Petch', sans-serif;*/
     background-image: url('https://i.pinimg.com/originals/fa/a2/a4/faa2a4a8f25471ccb5e9527eb5c09564.jpg');
-    background-size: cover;/*cubrir todo el espacio con la imagen*/
-    background-repeat: no-repeat; /*fondo no se repita*/
-    background-attachment:fixed;/*imagen de nubes quede fija*/
+    background-size: cover;
+    /*cubrir todo el espacio con la imagen*/
+    background-repeat: no-repeat;
+    /*fondo no se repita*/
+    background-attachment: fixed;
+    /*imagen de nubes quede fija*/
     margin: 0;
     padding: 0;
 }
@@ -70,7 +73,7 @@ body {
     left: 0;
     margin-bottom: 50px;
 }
-    
+
 
 /*cambio en titulo2 con id= instructions*/
 
@@ -78,22 +81,21 @@ body {
     color:#215cd3;
     text-align: center;
     padding: 3% 20%;
-    
 }
 
-
 .seleccion {
-    width:80%;
+    width: 80%;
     height: 80%;
     margin-left: 10%;
     margin-right: 10%;
-    border-radius:10px;
+    border-radius: 10px;
     background-color: #40e9a3;
 }
 
 
 /*Contenedor de todos los div pokemon*/
-#containerPokemon{
+
+#containerPokemon {
     left: 0;
     right: 0;
     margin-top: 21em;
@@ -101,30 +103,31 @@ body {
     margin-left: 10%;
     width: 80%;
 }
-.pokeDiv{
-   
-    display:inline-block;
-    text-align:center;
-    color:#1748A7;
+
+.pokeDiv {
+    display: inline-block;
+    text-align: center;
+    color: #1748A7;
     flex-wrap: wrap;
-    width:16%;
-    height:16%;
+    width: 16%;
+    height: 16%;
 }
+
+
 /*imágenes de pokémon en pantalla*/
-.pokeImg{
-    display:block;
-    align-items: center;
-    padding:1em 1em 0em 1em;
-    transition: 0.5s ease-in-out;
-    margin-left:3em ;
-    margin-right: 0;
-    width:60% ;
-    right:60% ;
 
-    
+.pokeImg {
+    display: block;
+    align-items: center;
+    padding: 1em 1em 0em 1em;
+    transition: 0.5s ease-in-out;
+    margin-left: 3em;
+    margin-right: 0;
+    width: 60%;
+    right: 60%;
 }
 
-.pokeImg:hover{
-    filter:drop-shadow 0 0.5em 0.8em -0.2em #c5d86d;
+.pokeImg:hover {
+    filter: drop-shadow 0 0.5em 0.8em -0.2em #c5d86d;
     filter: drop-shadow(0 1em .4em #2a2af1);
 }
