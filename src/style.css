@@ -32,7 +32,7 @@ body {
     line-height: 10em;
 }
 
-#logoImg {
+.logoImg {
     width: 50%;
     left: 45%;
 }
@@ -58,7 +58,7 @@ body {
     border-bottom: 4px solid #dfb11a;
 }
 
-#main{
+.main{
    /* background-color: blue;*/
     position: fixed;
     align-items: center;
@@ -74,7 +74,7 @@ body {
 
 /*cambio en titulo2 con id= instructions*/
 
-#instructions{
+.instructions{
     color:#215cd3;
     text-align: center;
     padding: 3% 20%;

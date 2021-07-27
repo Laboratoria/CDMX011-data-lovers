@@ -1,20 +1,19 @@
 import data from './data/pokemon/pokemon.js';
 
-const getPokemonTypes = () => {
-  let typePokemon = new Set(); //inicializa la variable que sera el nuevo set de datos irrepetibles
-  data.pokemon.forEach(pokemonActual => { //aqui se iteran los datos de tipo de pokemon con un forEach donde pokemonActual tiene la lista donde solo estan los tipos de pokemon,
+const getPokemonTypes = (filteredData) => {
+  const typePokemon = new Set(); //inicializa la variable que sera el nuevo set de datos irrepetibles
+  filteredData.forEach(pokemonActual => { //aqui se iteran los datos de tipo de pokemon con un forEach donde pokemonActual tiene la lista donde solo estan los tipos de pokemon,
     pokemonActual.type.forEach(types => { //Aqui vuelve a iterar la lista para sacar cada tipo de pokemon aunque la lista este repetida
       typePokemon.add(types); //Agrega la lista con los tipos de pokemon repetidos y creara una nueva agregando los tipos sin repetirlos
     })
   })
-  return typePokemon;
+  return typePokemon
 }
 
-const getPokemonRegion = () => {
-  let orderRegion = new Set();
-  data.pokemon.forEach(actualPokemon => {
+const getPokemonRegion = (filteredData) => {
+  const orderRegion = new Set();
+  filteredData.forEach(actualPokemon => {
     actualPokemon.generation.name;
-    //console.log(actual.generation.name)
     orderRegion.add(actualPokemon.generation.name);
   })
   return orderRegion;
@@ -38,20 +37,33 @@ const filterRegion = (pokemonActual) => {
   return resultRegion;
 }
 
-const sortPokemon = (filteredData, selectUser) => {
-  if (selectUser === "Orden ascendente") {
-    //let numerosPokemon = [];
-    //filteredData.forEach(pokemon => { numerosPokemon.push(pokemon.num) })
-    //console.log(numerosPokemon);
+const sortData = (filteredData, userOption) => {
+  if (userOption == "0 a 251") {
+    filteredData.sort(function (a, b) {
+      if (a.num < b.num) { return -1; }
+      if (a.num > b.num) { return 1; }
+      return 0;
+    })
+  } else if (userOption == "251 a 0") {
+    filteredData.sort(function (a, b) {
+      if (a.num < b.num) { return 1; }
+      if (a.num > b.num) { return -1; }
+      return 0;
+    })
 
-    //console.log("hola");
-    filteredData.reverse();
-    //filteredData.sort(function (a, b) {
-    //  console.log("B", b)
-    //  return a - b
-    //}); //ascendente
-  } else if (selectUser == "Orden descendente") {
-    filteredData.reverse();
+
+  } else if (userOption == "Nombre ascendente") {
+    filteredData.sort(function (a, b) {
+      if (a.name < b.name) { return -1; }
+      if (a.name > b.name) { return 1; }
+      return 0;
+    })
+  } else if (userOption == "Nombre descendente") {
+    filteredData.sort(function (a, b) {
+      if (a.name < b.name) { return 1; }
+      if (a.name > b.name) { return -1; }
+      return 0;
+    })
   }
 
 
@@ -60,32 +72,4 @@ const sortPokemon = (filteredData, selectUser) => {
 
 
 
-
-
-const createPokemonTypes = (pokemonActual) => {
-  let contenedor = document.querySelector("#containerPokemon");
-  let mostrarPokemon = document.createElement("div");
-  mostrarPokemon.setAttribute("class", "pokeDiv");
-  //console.log("la clase del pokemon es:", mostrarPokemon);
-  contenedor.appendChild(mostrarPokemon);
-
-  let mostrarImg = document.createElement("img");
-  mostrarImg.src = pokemonActual.img;
-  mostrarImg.setAttribute("class", "pokeImg");
-  //mostrarImg.className = "pokeImg";
-  //console.log(mostrarImg);
-  mostrarPokemon.appendChild(mostrarImg);
-
-  let tituloImg = document.createElement("h4");
-  let namePokemon = pokemonActual.name;
-  let initialName = namePokemon.charAt(0).toUpperCase();
-  let restName = namePokemon.slice(1);
-  let resultName = initialName + restName;
-  /*Mostramos el número + nombre en pantalla*/
-  tituloImg.innerHTML = pokemonActual.num + " " + resultName;
-  mostrarPokemon.appendChild(tituloImg);
-  //console.log(contenedor);
-
-};
-
-export { getPokemonTypes, getPokemonRegion, filterTypes, filterRegion, createPokemonTypes, sortPokemon };
+export { getPokemonRegion, filterTypes, filterRegion, getPokemonTypes, sortData };
