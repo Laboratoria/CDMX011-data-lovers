@@ -69,7 +69,7 @@ let createSelectRegion = document.createElement('select'); //Creando el Select q
 selectorRegion.appendChild(createSelectRegion);
 
 let pokemonRegion = getPokemonRegion(filteredData)
-    //Agregando nuestros "Options" a nuestro "Select"
+//Agregando nuestros "Options" a nuestro "Select"
 pokemonRegion.forEach(regionActual => {
     let region = document.createElement("option");
     region.value = regionActual;
@@ -77,16 +77,16 @@ pokemonRegion.forEach(regionActual => {
     createSelectRegion.appendChild(region);
 })
 document.getElementById("selectorRegion").addEventListener("change", (event) => {
-        //location.reload();
-        filteredData = filterRegion(event.target.value);
-        document.getElementById("containerPokemon").innerHTML = "";
+    //location.reload();
+    filteredData = filterRegion(event.target.value);
+    document.getElementById("containerPokemon").innerHTML = "";
 
-        filteredData.forEach(pokemonActual => {
-            createPokemonTypes(pokemonActual);
-        });
+    filteredData.forEach(pokemonActual => {
+        createPokemonTypes(pokemonActual);
+    });
 
-    })
-    //-------------------------Mostrar Pokemon--------------------------------
+})
+//-------------------------Mostrar Pokemon--------------------------------
 
 filteredData.forEach(pokemonActual => {
     createPokemonTypes(pokemonActual);
@@ -96,14 +96,22 @@ filteredData.forEach(pokemonActual => {
 let selectorSort = document.getElementById("selectorSort")
 let createSelectSort = document.createElement('select'); //Creando el Select que irá dentro del Div "productos"
 selectorSort.appendChild(createSelectSort);
-const sortAscending = document.createElement("option");
-sortAscending.value = "Orden ascendente";
-sortAscending.text = "Orden ascendente";
-createSelectSort.appendChild(sortAscending);
-const sortDescending = document.createElement("option");
-sortDescending.value = "Orden descendente";
-sortDescending.text = "Orden descendente";
-createSelectSort.appendChild(sortDescending);
+const sortAscendingNum = document.createElement("option");
+sortAscendingNum.value = "0 a 251";
+sortAscendingNum.text = "0 a 251";
+createSelectSort.appendChild(sortAscendingNum);
+const sortDescendingNum = document.createElement("option");
+sortDescendingNum.value = "251 a 0";
+sortDescendingNum.text = "251 a 0";
+createSelectSort.appendChild(sortDescendingNum);
+const sortAscendingName = document.createElement("option");
+sortAscendingName.value = "Nombre ascendente";
+sortAscendingName.text = "Nombre ascendente";
+createSelectSort.appendChild(sortAscendingName);
+const sortDescendingName = document.createElement("option");
+sortDescendingName.value = "Nombre descendente";
+sortDescendingName.text = "Nombre descendente";
+createSelectSort.appendChild(sortDescendingName);
 
 document.getElementById("selectorSort").addEventListener("change", (event) => {
     const userOption = event.target.value;
