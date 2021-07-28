@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -16,20 +17,40 @@
 <body>
     <!--Header contiene logo y enlaces-->
     <header class="header">
-        <div class="container">
+        <div class="container logo-nav-container">
             <div class="logo">
                 <img class="logoImg" src="https://cdn2.bulbagarden.net/upload/4/4b/Pok%C3%A9dex_logo.png"
                     alt="LogoPokemon">
             </div>
+            <span class="menu-icon">Ver menú</span>
+            <div class="navigation">
+                <ul>
+                    <li>
+                        <div class="selector" id="selectorType">Ver pokémon tipo: </div>
+                    </li>
+                    <li>
+                        <div class="selector" id="selectorRegion">Ver generación: </div>
+                    </li>
+                    <li>
+                        <div class="selector" id="selectorSort">Ordenar por: </div>
+                    </li>
+
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="https://pokemongolive.com/es_mx/">Pokémon Go</a></li>
+                </ul>
+            </div>
+            <!--
             <nav class="menu">
                 <a href="index.html">Inicio</a>
                 <a href="https://pokemongolive.com/es_mx/">Pokémon Go</a>
-            </nav>
+            </nav>-->
         </div>
     </header>
 
     <!--Main contiene instrucciones,sección de busqueda y orden-->
     <main>
+        <section id="containerPokemon"></section>
+        <!--
         <div class="main">
             <div class="seleccion">
                 <h2 class="instructions">¡¡Da click sobre el pokémon para ver más características!! </h2>
@@ -39,10 +60,15 @@
 
             </div>
         </div>
+        -->
     </main>
 
     <!--Sección que contiene pokemon, mostrando imagen, número y nombre-->
-    <section id="containerPokemon"></section>
+    <footer class="footer">
+        <div class="container">
+            <p>Creado por Alicia y Estefany en Laboratoria 011 Mex</p>
+        </div>
+    </footer>
 
     <script src="main.js" type="module"></script>
 </body>
