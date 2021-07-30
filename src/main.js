@@ -6,57 +6,74 @@ import {
     filterRegion,
     sortData,
 } from './data.js';
-//import { types } from '@babel/core';
+
 
 let filteredData = data.pokemon;
-//----------------- Creacion de div para mostrar los pokemon en la pagina inicial------------------
+//----------Diseño Header Responsive----------------------------
+jQuery('document').ready(function ($) {
+    let menuBtn = $('.menu-icon'),
+        menu = $('.navigation ul');
+    menuBtn.click(function () {
+        if (menu.hasClass("show")) {
+            menu.removeClass('show')
+        } else { menu.addClass('show') }
+
+    });
+});
+
+//-------- Creacion de div para mostrar los pokemon en la pagina inicial---------
+
 const createPokemonTypes = (dataPokemon) => {
+
+    /*Cramos variable para el contenedor de todos los div pokemon*/
     let contenedor = document.querySelector("#containerPokemon");
+    /*Creamos div individual, el cuál guardará a un solo pokémon */
     let mostrarPokemon = document.createElement("div");
     mostrarPokemon.setAttribute("class", "pokeDiv");
     contenedor.appendChild(mostrarPokemon);
 
-    let pokemonInfo = document.createElement("div");
-    pokemonInfo.setAttribute("class", "pokeInfo");
-
-
-
+    /*Mostrar Imágen*/
     let mostrarImg = document.createElement("img");
     mostrarImg.src = dataPokemon.img;
     mostrarImg.setAttribute("class", "pokeImg");
-    //mostrarImg.className = "pokeImg";
     mostrarPokemon.appendChild(mostrarImg);
 
+    /*Creamos div que contenga solo la información del pokemon individual*/
+    let pokemonInfo = document.createElement("div");
+    pokemonInfo.setAttribute("class", "pokeInfo");
 
-    let tituloImg = document.createElement("h3");
+    /*Número y Nombre */
+    let tituloImg = document.createElement("h4");
     let namePokemon = dataPokemon.name;
     let initialName = namePokemon.charAt(0).toUpperCase();
     let restName = namePokemon.slice(1);
     let resultName = initialName + restName;
-    let tituloUl = document.createElement("h4");
+    tituloImg.innerHTML = dataPokemon.num + " " + resultName;
+    pokemonInfo.appendChild(tituloImg);
 
-    let ul = document.createElement("ul");
+    /*Huevos*/
+    let egg = document.createElement("p");
+    let eggPokemon = dataPokemon.egg;
+    egg.innerHTML = (`<strong>Egg:</strong> ${eggPokemon}`);;
+    pokemonInfo.appendChild(egg);
+
+    /*Special Attack*/
+    let tituloUl = document.createElement("p");
+    pokemonInfo.appendChild(tituloUl);
+    tituloUl.innerHTML = "<strong>Special Attack:</strong>";
+    let info = document.createElement("p");
     for (let i = 0; i < dataPokemon["special-attack"].length; i++) {
         let attack = dataPokemon["special-attack"][i].name;
-        let li = document.createElement("li");
-        let text = document.createTextNode(attack);
-        li.appendChild(text);
-        //li.innerHTML = attack;
-        ul.appendChild(li)
+        let text = document.createTextNode(`${attack}`);
+        info.appendChild(text);
     }
+    pokemonInfo.appendChild(info);
 
 
 
-    tituloImg.innerHTML = dataPokemon.num + " " + resultName; //Mostramos el número + nombre en pantalla
-    tituloUl.innerHTML = "Special Attack:";
-    pokemonInfo.appendChild(tituloImg);
-    pokemonInfo.appendChild(tituloUl);
-    pokemonInfo.appendChild(ul);
+
 
     mostrarPokemon.appendChild(pokemonInfo);
-
-
-
 };
 //--------------------------------Creación de lista Type pokémon--------------------------------------
 
