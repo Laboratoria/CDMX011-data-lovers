@@ -18,11 +18,8 @@
     <!--Header contiene logo y enlaces-->
     <header class="header">
         <div class="container logo-nav-container">
-            <div class="logo">
-                <img class="logoImg" src="https://cdn2.bulbagarden.net/upload/4/4b/Pok%C3%A9dex_logo.png"
-                    alt="LogoPokemon">
-            </div>
-            <span class="menu-icon">Ver menú</span>
+            <img class="logoImg" src="https://cdn2.bulbagarden.net/upload/4/4b/Pok%C3%A9dex_logo.png" alt="LogoPokemon">
+            <span class="menu-icon"><img src="https://image.flaticon.com/icons/png/512/188/188966.png"></span>
             <div class="navigation">
                 <ul>
                     <li>
@@ -35,41 +32,31 @@
                         <div class="selector" id="selectorSort">Ordenar por: </div>
                     </li>
 
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="https://pokemongolive.com/es_mx/">Pokémon Go</a></li>
+                    <li>
+                        <a href="index.html"> Inicio </a>
+                    </li>
+                    <li>
+                        <a href="https://pokemongolive.com/es_mx/"> Pokémon Go </a>
+                    </li>
                 </ul>
             </div>
-            <!--
-            <nav class="menu">
-                <a href="index.html">Inicio</a>
-                <a href="https://pokemongolive.com/es_mx/">Pokémon Go</a>
-            </nav>-->
+
         </div>
     </header>
 
-    <!--Main contiene instrucciones,sección de busqueda y orden-->
+    <!--Main contiene el muestreo de los pókemon-->
     <main>
         <section id="containerPokemon"></section>
-        <!--
-        <div class="main">
-            <div class="seleccion">
-                <h2 class="instructions">¡¡Da click sobre el pokémon para ver más características!! </h2>
-                <div class="selector" id="selectorType">Ver pokémon tipo:</div>
-                <div class="selector" id="selectorRegion">Ver generación:</div>
-                <div class="selector" id="selectorSort">Ordenar por:</div>
-
-            </div>
-        </div>
-        -->
     </main>
 
-    <!--Sección que contiene pokemon, mostrando imagen, número y nombre-->
+    <!--Pié de página de la página-->
     <footer class="footer">
         <div class="container">
             <p>Creado por Alicia y Estefany en Laboratoria 011 Mex</p>
         </div>
     </footer>
-
+    <!--Enlace de jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main.js" type="module"></script>
 </body>
 
