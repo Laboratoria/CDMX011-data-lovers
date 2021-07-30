@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: white;
+    padding : 75px;
+
+    font-family: 'Orienta', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 86px;
+    text-align: left;
+
+
+color: #000000;
+}
+
+.logo{
+    position: absolute;
+    width: 341px;
+    height: 90px;
+    left: 1000px;
+    top: 50px;
+
+}
+
+div#root{
+    display: flex;
+    flex-wrap:wrap;
+    
+    
+
+}
+
+body{
+    background: #0ACA9C;
+    top: 205px;
+}
+
+.card{
+
+    margin:50px;
+    padding:50px;
+    background-color: hsl(240deg 8% 93%);
+    border-radius: 20px;
+    text-align: center;
+
+}

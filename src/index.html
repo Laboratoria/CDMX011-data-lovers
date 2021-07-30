@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers 15</title>
+  <meta name="viewport" content="width=device-width, user scalable=no, initial-scale=1.0
+  maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <lin <div class=padre>
+    <header> Rick and Morty Universe</header>
+    <div class="logo">
+      <img src="./data/imagenes/Mask Group.png" alt="logo">
+    </div>
+
+    <nav>
+      <label>Try our filter action on the show characters</label>
+    </nav>
+
+<body>
+  <div class="filterBox">
+    <label> Pick one between these categories</label>
+    <br>
+    <label>Status</label>
+    <select id="status">
+      <option  >Alive</option>
+      <option  ">Dead</option>
+      <option  >unknown</option>
+    </select>
+    <label>Gender</label>
+    <select id="gender">
+      <option>Female</option>
+      <option>Male</option>
+      <option>unknown</option>
+    </select>
+    <label>Species</label>
+    <select id="species">
+      <option>Human</option>
+      <option>Alien</option>
+      <option>Humanoid</option>
+      <option>Animal</option>
+      <option>Robot</option>
+      <option>Vampire</option>
+      <option>Mytholog</option>
+      <option>Cronenberg</option>
+      <option>unknown</option>
+    </select>
+    <label>Orden</label>
+    <select id="order">
+      <option value="A-Z">A-Z</option>
+      <option value="Z-A">Z-A</option>
+    </select>
+    <div id=categoriesContainer></div>
+    <input id=miInput type=search placeholder="Buscar por nombre">
+  </div>
+  <div class="cardContainer">
+    <div id="filtrado"></div>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
-  </body>
+  </div>
+  </div>
+</body>
+
 </html>
