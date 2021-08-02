@@ -157,7 +157,7 @@ export default {
         {
           "id": "26361a2c-32c6-4bd5-ae9c-8e40e17ae28d",
           "name": "Pazu's Mines",
-          "img": "",
+          "img": "https://gifimage.net/wp-content/uploads/2017/10/castle-in-the-sky-gif-5.gif", // Agrege
           "climate": "Dry",
           "terrain": "Hill",
           "surface_water": "0",
@@ -2091,7 +2091,7 @@ export default {
         {
           "id": "be837047-cd6f-477f-a83d-5aec9ed1dda7",
           "name": "Coquelicot Manor",
-          "img": "",
+          "img": "https://4.bp.blogspot.com/-DGSymvDbwos/VXEzDV00maI/AAAAAAAAQH4/Ek7lnsoWIXI/s1600/tumblr_mk6dv58Uyq1qehmh1o1_500.gif", //Agrege
           "climate": "Warm",
           "terrain": "Hill",
           "surface_water": "30",
