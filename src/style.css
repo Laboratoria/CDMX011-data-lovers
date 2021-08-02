@@ -91,16 +91,19 @@ select{
 /*Contenedor de todos los div pokemon*/
 
 #containerPokemon {
+ display: flex;
+flex-direction: row;
+justify-content:center;
 width: 80%;
 margin: auto;
 margin-top:10em ;
 flex-wrap: wrap;
 align-items: center; 
+min-height:calc(110vh - 100px - 300px);/*Damos valor mínimo de altura*/
 }
 
 
 div.pokeDiv {
-    
     justify-content: space-between;
     margin: 20px 10px;
     display:inline-block;
@@ -172,6 +175,7 @@ div.pokeDiv {
     padding: 1em 0;
     text-align: center;
     margin-top:4rem;
+    position:sticky;
 }
 
 

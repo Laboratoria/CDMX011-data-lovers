@@ -1,5 +1,5 @@
-import { example, anotherExample } from '../src/data.js';
-
+import { getPokemonRegion, filterTypes, filterRegion, getPokemonTypes, sortData } from '../src/data.js';
+import data from "./data/pokemon.js"//crear esto por cada archido
 
 describe('example', () => {
   it('is a function', () => {
