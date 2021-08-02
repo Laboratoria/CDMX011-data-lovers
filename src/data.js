@@ -1,9 +1,24 @@
-// estas funciones son de ejemplo
+//la logica
+//import data from './data/pokemon/pokemon.js';
+//import data from './data/pokemon/pokemon.js';
 
-export const example = () => {
-  return 'example';
-};
+export const getTypes = (data, types) => {
 
-export const anotherExample = () => {
-  return 'OMG';
+  let types = ""
+}
+
+
+
+/*let typePokemon = ""
+
+getallPokemon.forEach.type()*/
+
+
+/*const pokemonFilter = () => {
+  pokemonFilter.type.
+
+ console.log(pokemonFilter);
+
+  return 'pokemonFilter';
 };
+export default data; */
