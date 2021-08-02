@@ -7,16 +7,15 @@ const getPokemonTypes = (filteredData) => {
             typePokemon.add(types); //Agrega la lista con los tipos de pokemon repetidos y creara una nueva agregando los tipos sin repetirlos
         })
     })
-  })
-  return typePokemon;
+    return typePokemon;
 }
 const filterTypes = (pokemonType) => {
-  const resultFilter = data.pokemon.filter(pokemon => {
-    if (pokemon.type.includes(pokemonType)) {
-      return true;
-    }
-  })
-  return resultFilter;
+    const resultFilter = data.pokemon.filter(pokemon => {
+        if (pokemon.type.includes(pokemonType)) {
+            return true;
+        }
+    })
+    return resultFilter;
 }
 
 /*Muestra los pokemon, segpun la region*/
@@ -27,14 +26,6 @@ const getPokemonRegion = (filteredData) => {
         orderRegion.add(actualPokemon.generation.name);
     })
     return orderRegion;
-}
-const filterTypes = (pokemonType) => {
-    const resultFilter = data.pokemon.filter(pokemon => {
-        if (pokemon.type.includes(pokemonType)) {
-            return true;
-        }
-    })
-    return resultFilter;
 }
 
 const filterRegion = (pokemonActual) => {
