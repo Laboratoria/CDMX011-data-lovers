@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-//importar la data de pokemon.js
-//import { } from './data.js';
-
-import data from './data/pokemon/pokemon.js';
-
-const dataPokemon = data.pokemon;
-console.log(dataPokemon);
-
-
-/*
-import pokemon from './data/pokemon/pokemon.js';
-
-const allPokemon = ()
-pokemon.array.forEach(element => {
-    
-});
-*/
-=======
 /*Manipulación del DOM*/
 import data from './data/pokemon/pokemon.js';
 import { filterByType } from './data.js';
@@ -46,4 +27,3 @@ document.getElementById("root").innerHTML=primeraHistoria
 
 console.log(filterByType(dataPokemon,"fire"))
 
->>>>>>> 3ed83d712b8f2176dfa353dce0d4fa9d98a72f99

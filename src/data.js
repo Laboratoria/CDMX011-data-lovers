@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-//la logica
-//import data from './data/pokemon/pokemon.js';
-//import data from './data/pokemon/pokemon.js';
-
-export const getTypes = (data, types) => {
-
-  let types = ""
-}
-
-
-
-/*let typePokemon = ""
-
-getallPokemon.forEach.type()*/
-
-
-/*const pokemonFilter = () => {
-  pokemonFilter.type.
-
- console.log(pokemonFilter);
-
-  return 'pokemonFilter';
-};
-export default data; */
-=======
 /*Manipulación de datos a traves de arreglos y objetos (lógica)*/
 // estas funciones son de ejemplo
 /*export const pokemonType = type.filter(x =>) => {
@@ -53,4 +27,3 @@ export function filterByType(dataPokemon, pokemonType){
     return result
 }
 
->>>>>>> 3ed83d712b8f2176dfa353dce0d4fa9d98a72f99
