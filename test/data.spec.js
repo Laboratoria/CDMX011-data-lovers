@@ -1,5 +1,4 @@
 import { getPokemonRegion, filterTypes, filterRegion, getPokemonTypes, sortData } from '../src/data.js';
-
 import pokemon from "./dataMock/pokemon.js"; //crear esto por cada archido
 import { regionJoto, regionKhanto, sortAscendentLetter, sortDescendingLetter, sortDescendingNumber, typeWatter } from "./dataMock";
 
