@@ -1,5 +1,5 @@
 export default {
-    "pokemonSortBy": [{
+    "pokemon": [{
             "num": "187",
             "name": "hoppip",
             "generation": {

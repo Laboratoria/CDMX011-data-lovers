@@ -72,7 +72,7 @@ body {
 
 .navigation ul li a:hover {
     background-color: #fb2d2dab;
-    color: #1748A7;
+    color: #020659;
     box-shadow: 0px 1px 15px #fb2d2dab;
 }
 
@@ -84,7 +84,7 @@ body {
 }
 
 .navigation ul li div:hover {
-    color: #1748A7;
+    color: #020659;
 }
 
 select {
@@ -155,6 +155,7 @@ div.pokeDiv {
     background-color: rgb(255, 255, 255);
     filter: drop-shadow(0 1em .4em #2a69f1);
     color: rgb(4, 131, 182);
+    transition: 0.5s;
 }
 
 
@@ -183,7 +184,7 @@ img.pokeImg {
     position: sticky;
 }
 
-@media(max-width:1300px) {
+@media(max-width:1340px) {
     .logo-nav-container {
         display: flex;
         justify-content: space-around;

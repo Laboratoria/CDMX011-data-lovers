@@ -9,8 +9,8 @@ import {
 
 
 let filteredData = data.pokemon;
-//----------Diseño Header Responsive----------------------------
-jQuery('document').ready(function($) {
+//----------Diseño Header Responsive---------------------------
+jQuery('document').ready(function($) { // eslint-disable-line
     let menuBtn = $('.menu-icon'),
         menu = $('.navigation ul');
     menuBtn.click(function() {
@@ -52,7 +52,7 @@ const createPokemonTypes = (dataPokemon) => {
     /*Huevos*/
     let egg = document.createElement("p");
     let eggPokemon = dataPokemon.egg;
-    egg.innerHTML = (`<strong>Egg:</strong> ${eggPokemon}`);;
+    egg.innerHTML = (`<strong>Egg:</strong> ${eggPokemon}`);
     pokemonInfo.appendChild(egg);
 
     /*Special Attack*/
@@ -67,6 +67,7 @@ const createPokemonTypes = (dataPokemon) => {
     }
     pokemonInfo.appendChild(info);
     mostrarPokemon.appendChild(pokemonInfo);
+
 };
 //--------------------------------Creación de lista Type pokémon--------------------------------------
 //Creacion del selector
