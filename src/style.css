@@ -1,0 +1,31 @@
+body {
+    background-image: url(imagenes/paisaje_fondo.png);
+    background-position: center;
+    background-size: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+}
+
+.LogoPokemon{
+top: 30px;
+left: 570px;
+position: relative;
+}
+
+.box {
+    position: relative;
+    background: black;
+    color: #26ca26;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    font-family: Verdana;
+    font-size: 13px;
+    float:left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
