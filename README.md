@@ -1,5 +1,8 @@
 # Data Lovers Pokémon
 
+Dupla 6 
+Nombre-integrante : Estefany Arilene García García
+Nombre-integrante : Bertha Alicia Hernández García
 
 ## Resumen del proyecto
 
@@ -91,7 +94,7 @@ Los Pokémon se alimentan de caramelos y un maestro Pokémon necesita saber cuá
 5. H.U.5 UNIT TESTING.
 
   * Criterios de terminado:
-  
+
       - [ ] Testeo de función filterTypes .
       - [ ] Testeo de función filterRegion.
       - [ ] Testeo de función sortData.
