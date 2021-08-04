@@ -1,5 +1,8 @@
 # Data Lovers Pokémon
 
+Dupla 6 
+Nombre-integrante : Estefany Arilene García García
+Nombre-integrante : Bertha Alicia Hernández García
 
 ## Resumen del proyecto
 
@@ -34,12 +37,12 @@ Los Pokémon se alimentan de caramelos y un maestro Pokémon necesita saber cuá
 
 1. H.U.1 YO COMO usuario, QUIERO una pagina me muestre los Pokémon de Kanto y Jhoto, PARA tener una vista rápida de los Pokémon de Kanto y Jhoto.
 
-    * Criterios de aceptación:
+  * Criterios de aceptación:
     
      - [ ] Pedir feedback de los prototipos nuevos creados.
      - [ ] Lista desplegable con los tipos de pokemon para seleccionar
     
-    * Criterios de terminado:
+  * Criterios de terminado:
 
      - [ ] Realizar prototipos de alta y baja fidelidad.
      - [ ] Hacer esqueleto en HTML y CSS básico lo más parecido al prototipo inicial.
@@ -48,51 +51,72 @@ Los Pokémon se alimentan de caramelos y un maestro Pokémon necesita saber cuá
 
 2. H.U.2 YO COMO usuario QUIERO filtrar los Pokémon por tipo y por generación PARA tener una mejor vista de todos los Pokémon.
 
-    * Criterios de aceptación:
+  * Criterios de aceptación:
 
-     - [ ] Ver los pokemon ordenados.
-     - [ ] Los botones de filtrado mas visibles.
-     - [ ] Cabecera con información para que no se vea vacía.
-     - [ ] Al seleccionar un tipo de pokémon muestre el pokémon.
+      - [ ] Ver los pokemon ordenados.
+      - [ ] Los botones de filtrado mas visibles.
+      - [ ] Cabecera con información para que no se vea vacía.
+      - [ ] Al seleccionar un tipo de pokémon muestre el pokémon.
 
-    * Criterios de terminado:
+  * Criterios de terminado:
 
-     - [ ] Que los pokemon se vean ordenados en la pagina.
-     - [ ] Feedback de usuarios sobre la visualización de los pokemon.
-     - [ ] El select de los tipos de pokemon filtre la data por tipo y la muestre en la pantalla.
+      - [ ] Que los pokemon se vean ordenados en la pagina.
+      - [ ] Feedback de usuarios sobre la visualización de los pokemon.
+      - [ ] El select de los tipos de pokemon filtre la data por tipo y la muestre en la pantalla.
     
 3. H.U.3- YO COMO jugador, QUIERO filtrar los Pokémon por numero de menor a mayor de mayor a menor y por orden alfabético, PARA observar en pantalla.
 
-    * Criterios de aceptación:
-     - [ ] seleccionar la opción de orden por número .
-     - [ ] Al elegir la opción de orden muestra los Pokémon de manera adecuada.
-     - [ ] Dar diseño al área que muestra los pokémon.
+  * Criterios de aceptación:
 
-    * Criterios de terminado:
-     - [ ] Crear la función sort.
-     - [ ] Que al elegir la opción muestre de manera correcta el filtrado por  numero y nombre de manera ascendente y descendente.
+      - [ ] seleccionar la opción de orden por número .
+      - [ ] Al elegir la opción de orden muestra los Pokémon de manera adecuada.
+      - [ ] Dar diseño al área que muestra los pokémon.
+
+  * Criterios de terminado:
+
+      - [ ] Crear la función sort.
+      - [ ] Que al elegir la opción muestre de manera correcta el filtrado por  numero y nombre de manera ascendente y descendente.
 
 4. H.U.4- YO COMO usuario, QUIERO ver la siguiente información de los Pokémon (ataques especiales, huevos) debajo de la imagen de cada uno.
 
-   * Criterios de aceptación:
-     - [ ] Ver debajo de cada Pokémon información con características.
-     - [ ] Que se visualicen de manera ordenada y simétrica las tarjetas de los Pokémon.
-     - [ ] En pantallas pequeñas el menú se oculte en un botón.
+  * Criterios de aceptación:
 
-    * Criterios de terminado:
-     - [ ] Agregar CSS responsive al header y las tarjetas pokemon.
-     - [ ] Agregar estilos a las tarjetas de informacion pokemon.
+      - [ ] Ver debajo de cada Pokémon información con características.
+      - [ ] Que se visualicen de manera ordenada y simétrica las tarjetas de los Pokémon.
+      - [ ] En pantallas pequeñas el menú se oculte en un botón.
+
+  * Criterios de terminado:
+
+      - [ ] Agregar CSS responsive al header y las tarjetas pokemon.
+      - [ ] Agregar estilos a las tarjetas de informacion pokemon.
 
 
 5. H.U.5 UNIT TESTING.
 
   * Criterios de terminado:
-     - [ ] Testeo de función filterTypes .
-     - [ ] Testeo de función filterRegion.
-     - [ ] Testeo de función sortData.
 
+      - [ ] Testeo de función filterTypes .
+      - [ ] Testeo de función filterRegion.
+      - [ ] Testeo de función sortData.
 
-   ![baja_fidelidad](./img_prototype/baja_fidelidad1.jpg)
+## Prototipos de Baja fidelidad
+
+   ![baja_fidelidad](https://github.com/Aliciahdzg/CDMX011-data-lovers/blob/master/src/img_prototype/baja_fidelidad1.jpg)
+
+   ![baja_fidelidad2](https://github.com/Aliciahdzg/CDMX011-data-lovers/blob/master/src/img_prototype/baja_fidelidad2.jpg)
+
+## Prototipos de Alta fidelidad
+
+   ![alta_fidelidad](https://github.com/Aliciahdzg/CDMX011-data-lovers/blob/master/src/img_prototype/alta_fidelidad1.png)
+
+   ![alta_fidelidad1](https://github.com/Aliciahdzg/CDMX011-data-lovers/blob/master/src/img_prototype/alta_fidelidad2.PNG)
+
+## Imágenes de la página
+   ![alta_fidelidad](https://github.com/Aliciahdzg/CDMX011-data-lovers/blob/master/src/img_prototype/pagina1.PNG)
+
+   ![alta_fidelidad](https://github.com/Aliciahdzg/CDMX011-data-lovers/blob/master/src/img_prototype/pagina_ipad.PNG)
+
+   ![alta_fidelidad1](https://github.com/Aliciahdzg/CDMX011-data-lovers/blob/master/src/img_prototype/ipad_desplegable.PNG)
   
 
 
