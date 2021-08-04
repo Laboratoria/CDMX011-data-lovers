@@ -3,131 +3,247 @@ body {
     /*font-family: 'Chakra Petch', sans-serif;*/
     background-image: url('https://i.pinimg.com/originals/fa/a2/a4/faa2a4a8f25471ccb5e9527eb5c09564.jpg');
     background-size: cover;
-    /*cubrir todo el espacio con la imagen*/
     background-repeat: no-repeat;
-    /*fondo no se repita*/
     background-attachment: fixed;
-    /*imagen de nubes quede fija*/
     margin: 0;
     padding: 0;
-}
-
-.header {
-    width: 100%;
-    height: 10.5%;
-    background-color: #f32020cb;
-    position: fixed;
-    z-index: 1;
-    /*Para que este encima por los demas contenedores*/
-    top: 0;
-    left: 0;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    line-height: 1.4em;
 }
 
 .container {
-    width: 95%;
+    width: 85%;
     max-width: 1800px;
-    margin: auto;
+    margin: 0 auto;
 }
 
-.logo {
-    float: left;
-    line-height: 10em;
+.header {
+    background-color: #f32020cb;
+    color: #0D5FA6;
+    font-size: 1em;
+    padding: 1em 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+.header a {
+    color: #f0c73f;
+    text-decoration: none;
+}
+
+.header div {
+    color: #f0c73f;
+}
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .logoImg {
-    width: 50%;
-    left: 45%;
+    width: 15em;
+    height: auto;
 }
 
-.menu {
-    float: right;
-    line-height: 50px;
+.menu-icon {
+    display: none;
 }
 
-.menu a {
-    color: #ECEFA4;
-    text-decoration: none;
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation ul li {
     display: inline-block;
-    padding: 10px 15px;
-    line-height: normal;
-    font-size: 14px;
-    transition: all 500ms ease;
-    border-bottom: 4px solid transparent;
 }
 
-.menu a:hover {
-    color: yellow;
-    border-bottom: 4px solid #dfb11a;
+.navigation ul li a {
+    display: block;
+    padding: 0.5rem 2rem;
+    transition: all 0.4s ease-in-out;
+    border-radius: 15px;
 }
 
-.main{
-   /* background-color: blue;*/
-    position: fixed;
-    align-items: center;
-    width: 100%;
-    height: 22%;
-    z-index: 1;
-    /*Para que este encima por los demas contenedores*/
-    top: 7em;
-    left: 0;
-    margin-bottom: 50px;
+.navigation ul li a:hover {
+    background-color: #fb2d2dab;
+    color: #020659;
+    box-shadow: 0px 1px 15px #fb2d2dab;
 }
 
-
-/*cambio en titulo2 con id= instructions*/
-
-.instructions{
-    color:#215cd3;
-    text-align: center;
-    padding: 3% 20%;
+.navigation ul li div {
+    display: block;
+    padding: 0.5rem 2rem;
+    transition: all 0.4s linear;
+    border-radius: 15px;
 }
 
-.seleccion {
-    width: 80%;
-    height: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 10px;
-    background-color: #40e9a3;
+.navigation ul li div:hover {
+    color: #020659;
+}
+
+select {
+    background-color: rgb(99, 206, 248);
+    border: none;
+    border-radius: 5px;
+    color: #163faf;
 }
 
 
 /*Contenedor de todos los div pokemon*/
 
 #containerPokemon {
-    left: 0;
-    right: 0;
-    margin-top: 21em;
-    margin-right: 10%;
-    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 80%;
+    margin: auto;
+    margin-top: 10em;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: calc(110vh - 100px - 300px);
+    /*Damos valor mínimo de altura*/
 }
 
-.pokeDiv {
+div.pokeDiv {
+    justify-content: space-between;
+    margin: 20px 10px;
     display: inline-block;
-    text-align: center;
-    color: #1748A7;
     flex-wrap: wrap;
-    width: 16%;
-    height: 16%;
+    width: 200px;
+    height: 320px;
+    padding: 1em;
+    align-items: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    /*background-color: #dfb11a;*/
+}
+
+.pokeInfo {
+    background-color: rgba(255, 255, 255, 0.609);
+    /*padding:0.3em 1em;*/
+    width: 200px;
+    height: 150px;
+    font-family: 'Chakra Petch', sans-serif;
+    border-radius: 8px;
+}
+
+.pokeInfo h4 {
+    text-align: center;
+    margin: 0;
+    background-color: #f32020cb;
+    color: #f0c73f;
+}
+
+.pokeInfo p {
+    text-align: left;
+    margin: 0;
+    margin-top: 0.5em;
+    padding: 0 1rem;
+    ;
+    color: rgb(23, 180, 241);
+    font-size: 13px;
+}
+
+.pokeInfo:hover {
+    background-color: rgb(255, 255, 255);
+    filter: drop-shadow(0 1em .4em #2a69f1);
+    color: rgb(4, 131, 182);
+    transition: 0.5s;
 }
 
 
 /*imágenes de pokémon en pantalla*/
 
-.pokeImg {
-    display: block;
-    align-items: center;
-    padding: 1em 1em 0em 1em;
+img.pokeImg {
+    justify-content: space-between;
+    padding: 25px;
     transition: 0.5s ease-in-out;
-    margin-left: 3em;
-    margin-right: 0;
-    width: 60%;
-    right: 60%;
+    width: 150px;
+    max-width: 150px;
+    height: 150px;
+    align-items: center;
 }
 
 .pokeImg:hover {
-    filter: drop-shadow 0 0.5em 0.8em -0.2em #c5d86d;
-    filter: drop-shadow(0 1em .4em #2a2af1);
+    filter: drop-shadow(0 1em .4em #2a69f1);
+}
+
+.footer {
+    background-color: #f32020cb;
+    color: #f0c73f;
+    padding: 1em 0;
+    text-align: center;
+    margin-top: 4rem;
+    position: sticky;
+}
+
+@media(max-width:1366px) {
+    .logo-nav-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .logoImg {
+        width: 10em;
+        height: auto;
+    }
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+    }
+    .menu-icon img {
+        width: 50px;
+        height: auto;
+        transform: rotate(-180deg);
+    }
+    .navigation {
+        width: 100%;
+        margin-top: 1em;
+    }
+    .navigation ul {
+        display: none;
+    }
+    .navigation ul.show {
+        display: block;
+    }
+    .navigation ul li {
+        display: inline-block;
+        margin-top: 1rem;
+        font-size: 15px;
+    }
+    .navigation ul li a {
+        padding: 0rem 2rem;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+    .navigation ul li div {
+        padding: 0rem 2rem;
+        transition: all 0.4s linear;
+        border-radius: 5px;
+    }
+    /*
+        .navigation ul li a:hover{
+            background-color: #e00d0d;
+            border-radius: 10px;
+            color: #f0c73f;
+        }
+    .navigation ul li div{
+        display:block;
+        padding: 0.5rem 1rem;
+        transition:all 0.4s linear;
+    }
+        .navigation ul li div:hover{
+        background-color: #e00d0d;
+        border-radius: 10px;
+        color: #f0c73f;
+    }*/
 }
