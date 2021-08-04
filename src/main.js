@@ -10,7 +10,7 @@ import {
 
 let filteredData = data.pokemon;
 //----------Diseño Header Responsive---------------------------
-jQuery('document').ready(function($) { // eslint-disable-line
+/*jQuery('document').ready(function($) { // eslint-disable-line
     let menuBtn = $('.menu-icon'),
         menu = $('.navigation ul');
     menuBtn.click(function() {
@@ -19,6 +19,15 @@ jQuery('document').ready(function($) { // eslint-disable-line
         } else { menu.addClass('show') }
 
     });
+});*/
+
+document.getElementById("menuBTN").addEventListener("click", () => {
+    const mostrar = document.getElementById("navegacion").className;
+    if (mostrar == "") {
+        document.getElementById("navegacion").setAttribute("class", "show");
+    } else {
+        document.getElementById("navegacion").removeAttribute("class", "show");
+    }
 });
 
 //-------- Creacion de div para mostrar los pokemon en la pagina inicial---------
@@ -61,7 +70,7 @@ const createPokemonTypes = (dataPokemon) => {
     tituloUl.innerHTML = "<strong>Special Attack:</strong>";
     let info = document.createElement("p");
     for (let i = 0; i < dataPokemon["special-attack"].length; i++) {
-        let attack = dataPokemon["special-attack"][i].name;
+        let attack = dataPokemon["special-attack"][i].name + " ";
         let text = document.createTextNode(`${attack}`);
         info.appendChild(text);
     }

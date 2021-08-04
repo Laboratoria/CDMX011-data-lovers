@@ -1,8 +1,8 @@
 import { filterTypes, filterRegion, sortData } from '../src/data.js';
 import dataMockSortBy from "./dataMock/dataMockSortBy.js";
 import pokemonMock from "./dataMock/pokemonMock.js";
-
 const pokemonData = pokemonMock.pokemon;
+
 describe('Sort by number an alphabetically ascendant and descendant', () => {
     const pokemonSort = dataMockSortBy.pokemon;
     it('is a function', () => {
