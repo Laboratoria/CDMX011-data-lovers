@@ -41,6 +41,7 @@ describe('Show pokemon by types', () => {
 });
 
 describe('filter types by generation', () => {
+
     it('show kanto generation', () => {
         const result = filterRegion("kanto", pokemonData);
         expect(result.length).toBe(7);

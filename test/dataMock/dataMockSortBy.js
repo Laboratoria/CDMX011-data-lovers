@@ -1,5 +1,16 @@
 export default {
     "pokemon": [{
+            "num": "240",
+            "name": "magby",
+            "generation": {
+                "name": "johto"
+            },
+
+            "type": [
+                "fire"
+            ]
+        },
+        {
             "num": "187",
             "name": "hoppip",
             "generation": {
@@ -21,11 +32,32 @@ export default {
             }
         },
         {
+            "num": "037",
+            "name": "vulpix",
+            "generation": {
+                "name": "kanto"
+            },
+            "type": [
+                "fire"
+            ]
+        },
+        {
             "num": "160",
             "name": "feraligatr",
             "generation": {
                 "name": "johto"
             }
+        },
+        {
+            "num": "073",
+            "name": "tentacruel",
+            "generation": {
+                "name": "kanto"
+            },
+            "type": [
+                "water",
+                "poison"
+            ]
         },
     ],
 
@@ -56,10 +88,74 @@ export default {
             "generation": {
                 "name": "johto"
             }
+        },
+        {
+            "num": "240",
+            "name": "magby",
+            "generation": {
+                "name": "johto"
+            },
+
+            "type": [
+                "fire"
+            ]
+        },
+        {
+            "num": "073",
+            "name": "tentacruel",
+            "generation": {
+                "name": "kanto"
+            },
+            "type": [
+                "water",
+                "poison"
+            ]
+        },
+        {
+            "num": "037",
+            "name": "vulpix",
+            "generation": {
+                "name": "kanto"
+            },
+            "type": [
+                "fire"
+            ]
         }
     ],
 
     "NameDescendant": [{
+            "num": "037",
+            "name": "vulpix",
+            "generation": {
+                "name": "kanto"
+            },
+            "type": [
+                "fire"
+            ]
+        },
+        {
+            "num": "073",
+            "name": "tentacruel",
+            "generation": {
+                "name": "kanto"
+            },
+            "type": [
+                "water",
+                "poison"
+            ]
+        },
+        {
+            "num": "240",
+            "name": "magby",
+            "generation": {
+                "name": "johto"
+            },
+
+            "type": [
+                "fire"
+            ]
+        },
+        {
             "num": "187",
             "name": "hoppip",
             "generation": {
@@ -104,6 +200,27 @@ export default {
             }
         },
         {
+            "num": "037",
+            "name": "vulpix",
+            "generation": {
+                "name": "kanto"
+            },
+            "type": [
+                "fire"
+            ]
+        },
+        {
+            "num": "073",
+            "name": "tentacruel",
+            "generation": {
+                "name": "kanto"
+            },
+            "type": [
+                "water",
+                "poison"
+            ]
+        },
+        {
             "num": "160",
             "name": "feraligatr",
             "generation": {
@@ -116,10 +233,32 @@ export default {
             "generation": {
                 "name": "johto"
             }
+        },
+        {
+            "num": "240",
+            "name": "magby",
+            "generation": {
+                "name": "johto"
+            },
+
+            "type": [
+                "fire"
+            ]
         }
     ],
 
     "NumberDescendant": [{
+            "num": "240",
+            "name": "magby",
+            "generation": {
+                "name": "johto"
+            },
+
+            "type": [
+                "fire"
+            ]
+        },
+        {
             "num": "187",
             "name": "hoppip",
             "generation": {
@@ -132,6 +271,27 @@ export default {
             "generation": {
                 "name": "johto"
             }
+        },
+        {
+            "num": "073",
+            "name": "tentacruel",
+            "generation": {
+                "name": "kanto"
+            },
+            "type": [
+                "water",
+                "poison"
+            ]
+        },
+        {
+            "num": "037",
+            "name": "vulpix",
+            "generation": {
+                "name": "kanto"
+            },
+            "type": [
+                "fire"
+            ]
         },
         {
             "num": "022",
