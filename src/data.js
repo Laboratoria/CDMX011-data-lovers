@@ -40,27 +40,28 @@ const filterRegion = (pokemonActual, pokemon = data.pokemon) => {
 /*Ordenar pokemón por número ascendente y descendente y  por nombre ascendente y descendente */
 const sortData = (filteredData, userOption) => {
     if (userOption == "0 a 251") {
-        filteredData.sort(function(a, b) {
+        filteredData.sort(function (a, b) {
             if (a.num < b.num) { return -1; }
             if (a.num > b.num) { return 1; }
             return 0;
         })
     } else if (userOption == "251 a 0") {
-        filteredData.sort(function(a, b) {
+        filteredData.sort(function (a, b) {
             if (a.num < b.num) { return 1; }
             if (a.num > b.num) { return -1; }
             return 0;
         })
     } else if (userOption == "Nombre ascendente") {
-        filteredData.sort(function(a, b) {
+        filteredData.sort(function (a, b) {
             if (a.name < b.name) { return -1; }
             if (a.name > b.name) { return 1; }
             return 0;
         })
     } else if (userOption == "Nombre descendente") {
-        filteredData.sort(function(a, b) {
+        filteredData.sort(function (a, b) {
             if (a.name < b.name) { return 1; }
             if (a.name > b.name) { return -1; }
+
             return 0;
         })
     }
