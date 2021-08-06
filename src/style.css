@@ -1,6 +1,5 @@
 body {
     font-family: 'Balsamiq Sans', cursive;
-    /*font-family: 'Chakra Petch', sans-serif;*/
     background-image: url('https://i.pinimg.com/originals/fa/a2/a4/faa2a4a8f25471ccb5e9527eb5c09564.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,6 +8,9 @@ body {
     padding: 0;
     line-height: 1.4em;
 }
+
+
+/*Aqui empieza la edicion del header*/
 
 .container {
     width: 85%;
@@ -95,6 +97,9 @@ select {
 }
 
 
+/*Aqui termina la edicion del header*/
+
+
 /*Contenedor de todos los div pokemon*/
 
 #containerPokemon {
@@ -127,7 +132,6 @@ div.pokeDiv {
 
 .pokeInfo {
     background-color: rgba(255, 255, 255, 0.609);
-    /*padding:0.3em 1em;*/
     width: 200px;
     height: 150px;
     font-family: 'Chakra Petch', sans-serif;
@@ -166,7 +170,10 @@ div.pokeDiv {
     width: 150px;
     max-width: 150px;
     height: 150px;
+<<<<<<< HEAD
  
+=======
+>>>>>>> master
 }
 
 .pokeImg:hover {
@@ -205,6 +212,10 @@ div.pokeDiv {
         transition: all 0.4s linear;
     }
     .menu-icon img:hover{
+        transform: rotate(-180deg);
+        transition: all 0.9s ease-in-out;
+    }
+    .menu-icon img:hover {
         transform: rotate(-180deg);
         transition: all 0.9s ease-in-out;
     }
