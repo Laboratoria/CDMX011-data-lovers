@@ -1,6 +1,5 @@
 body {
     font-family: 'Balsamiq Sans', cursive;
-    /*font-family: 'Chakra Petch', sans-serif;*/
     background-image: url('https://i.pinimg.com/originals/fa/a2/a4/faa2a4a8f25471ccb5e9527eb5c09564.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,6 +8,9 @@ body {
     padding: 0;
     line-height: 1.4em;
 }
+
+
+/*Aqui empieza la edicion del header*/
 
 .container {
     width: 85%;
@@ -95,6 +97,9 @@ select {
 }
 
 
+/*Aqui termina la edicion del header*/
+
+
 /*Contenedor de todos los div pokemon*/
 
 #containerPokemon {
@@ -127,7 +132,6 @@ div.pokeDiv {
 
 .pokeInfo {
     background-color: rgba(255, 255, 255, 0.609);
-    /*padding:0.3em 1em;*/
     width: 200px;
     height: 150px;
     font-family: 'Chakra Petch', sans-serif;
@@ -146,7 +150,6 @@ div.pokeDiv {
     margin: 0;
     margin-top: 0.5em;
     padding: 0 1rem;
-    ;
     color: rgb(23, 180, 241);
     font-size: 13px;
 }
@@ -161,14 +164,12 @@ div.pokeDiv {
 
 /*imágenes de pokémon en pantalla*/
 
-img.pokeImg {
-    justify-content: space-between;
+.pokeImg {
     padding: 25px;
     transition: 0.5s ease-in-out;
     width: 150px;
     max-width: 150px;
     height: 150px;
-    align-items: center;
 }
 
 .pokeImg:hover {
@@ -205,6 +206,10 @@ img.pokeImg {
         height: auto;
         transform: rotate(-180deg);
     }
+    .menu-icon img:hover {
+        transform: rotate(-180deg);
+        transition: all 0.9s ease-in-out;
+    }
     .navigation {
         width: 100%;
         margin-top: 1em;
@@ -230,20 +235,4 @@ img.pokeImg {
         transition: all 0.4s linear;
         border-radius: 5px;
     }
-    /*
-        .navigation ul li a:hover{
-            background-color: #e00d0d;
-            border-radius: 10px;
-            color: #f0c73f;
-        }
-    .navigation ul li div{
-        display:block;
-        padding: 0.5rem 1rem;
-        transition:all 0.4s linear;
-    }
-        .navigation ul li div:hover{
-        background-color: #e00d0d;
-        border-radius: 10px;
-        color: #f0c73f;
-    }*/
 }
