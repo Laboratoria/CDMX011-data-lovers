@@ -1,9 +1,13 @@
-// estas funciones son de ejemplo
+//Filtrado por tipo.
+export function filterType(pokemones,typePokemon){
+  let resultado=pokemones.filter(function(pokemones){
+                  return pokemones.type == typePokemon;
+                 })
+  return resultado
+}
 
-export const example = () => {
-  return 'example';
-};
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+
+
+
+

@@ -5,8 +5,61 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <header>
+  </header>
   <body>
+
+<main>
+    <div class="container">
+      <img  src="img/Pokemon.logo.png" width="100%" />
+      </div>
+      <div class="searchBack">
+
+        <form>
+          <select  id="lista" name ="type" class="filter" Change="filter" </select>
+           <option value="0">Filter by type </option>
+           <option value ="fire"> fire </option>
+           <option value ="grass"> grass </option>
+           <option value = "poison"> poison </option>
+           <option value = "flying"> flying </option>
+           <option value ="water"> water </option>
+           <option value = "bug"> bug </option>
+           <option value = "normal"> normal </option>
+           <option value ="electric"> electric </option>
+           <option value = "ground"> ground </option>
+           <option value = "fighting"> fighting </option>
+           <option value ="psychic"> psychic </option>
+           <option value = "ice"> ice </option>
+           <option value = "rock"> rock </option>
+           <option value ="dragon"> dragon </option>
+           <option value = "fairy"> fairy </option>
+           <option value = "steel"> steel </option>
+           <option value ="dark"> dark </option>
+
+            </select>
+        </form>
+
+        <nav class="menu">
+
+          <select name="order" id="order">
+            <option value="first">Order by:</option>
+            <option value="A-Z" id="ascending">A-Z</option>
+            <option value="Z-A" id="descending">Z-A</option>
+          </select>
+
+          <button>Inicio</button>
+      <div>
+        <form>
+          <input class="search" type="search" placeholder="Search..." name="search" />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+
+
+      </div>
+
     <div id="root"></div>
     <script src="main.js" type="module"></script>
+</main>
   </body>
 </html>
