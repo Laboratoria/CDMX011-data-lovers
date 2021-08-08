@@ -1,8 +1,8 @@
 import data from './data/pokemon/pokemon.js';
 
 const getPokemonTypes = (filteredData) => {
-    const typePokemon = new Set(); // eslint-disable-line 
-    filteredData.forEach(pokemonActual => { //aqui se iteran los datos de tipo de pokemon con un forEach donde pokemonActual tiene la lista donde solo estan los tipos de pokemon,
+    const typePokemon = new Set();
+    filteredData.forEach(pokemonActual => { //Aqui se iteran los datos de tipo de pokemon con un forEach donde pokemonActual tiene la lista donde solo estan los tipos de pokemon,
         pokemonActual.type.forEach(types => { //Aqui vuelve a iterar la lista para sacar cada tipo de pokemon aunque la lista este repetida
             typePokemon.add(types); //Agrega la lista con los tipos de pokemon repetidos y creara una nueva agregando los tipos sin repetirlos
         })
@@ -17,6 +17,7 @@ const filterTypes = (pokemonType, pokemon = data.pokemon) => {
     })
     return resultFilter;
 }
+
 
 /*Muestra los pokemon, segpun la region*/
 const getPokemonRegion = (filteredData) => {

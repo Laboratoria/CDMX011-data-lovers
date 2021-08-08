@@ -6,9 +6,8 @@ import {
     filterRegion,
     sortData,
 } from './data.js';
-
-
 let filteredData = data.pokemon;
+
 //----------Diseño Header Responsive---------------------------
 /*jQuery('document').ready(function($) { // eslint-disable-line
     let menuBtn = $('.menu-icon'),
@@ -74,69 +73,70 @@ const createPokemonTypes = (dataPokemon) => {
         let text = document.createTextNode(`${attack}`);
         info.appendChild(text);
     }
+
     pokemonInfo.appendChild(info);
     mostrarPokemon.appendChild(pokemonInfo);
-
 };
+
 //--------------------------------Creación de lista Type pokémon--------------------------------------
+
 //Creacion del selector
 let selectorType = document.getElementById('selectorType')
-let createSelectType = document.createElement('select'); //Creando el Select que irá dentro del Div "productos"
+let createSelectType = document.createElement('select'); //Creando el Select que irá dentro de selectorType
 selectorType.appendChild(createSelectType);
-const firstOption = document.createElement("option");
+const firstOption = document.createElement("option");//Creando opción de "todos los pokemon"
 firstOption.text = "Todos los Pokemon";
 createSelectType.appendChild(firstOption);
 
-//Agrega cada tipo como opcion del selector
-let pokemonTypes = getPokemonTypes(filteredData) //Agregando nuestros "Options" a nuestro "Select"
-pokemonTypes.forEach(types => { //Otro forEach a los tipos de pokemon para iterar la lista, despues crea el elemento
-        let type = document.createElement("option");
-        type.text = types;
-        createSelectType.appendChild(type);
-    })
-    //Aqui el evento sobre que sucede cuando presionas las opciones del select
+//Agrega cada tipo de pokemon como opcion del selector.
+let pokemonTypes = getPokemonTypes(filteredData)//getPokemonTypes: función donde se crea el set de tipos.
+console.log("tipos de pokemones", pokemonTypes);
+pokemonTypes.forEach(types => { // forEach a los tipos de pokemon para iterar la lista, despues crea el elemento.
+    let type = document.createElement("option");
+    type.text = types;
+    createSelectType.appendChild(type);
+
+})
+//El evento change se activará una vez que el usuario selecciona una opción
 document.getElementById("selectorType").addEventListener("change", (event) => {
-    //location.reload();
-    if (event.target.value == "Todos los Pokemon") { //al presionar esta opcion se recarga la pagina
+    if (event.target.value == "Todos los Pokemon") { //al presionar esta opcion se recarga la página
         location.reload()
     } else { //muestra los tipos de pokemon
         filteredData = filterTypes(event.target.value);
         document.getElementById("containerPokemon").innerHTML = "";
-
         filteredData.forEach(pokemonActual => {
             createPokemonTypes(pokemonActual);
         });
     }
 
 })
+//-------------------------Mostrar Pokemon--------------------------------
 
-//--------------------------------------Creación de Ordenar pokémon por generación---------------------------------------------------------
+filteredData.forEach(pokemonActual => {
+    createPokemonTypes(pokemonActual);
+});
+
+//--------------------------------------Creación de Ordenar pokémon por generación--------------------------------
 let selectorRegion = document.getElementById("selectorRegion")
-let createSelectRegion = document.createElement('select'); //Creando el Select que irá dentro del Div "productos"
+let createSelectRegion = document.createElement('select');
 selectorRegion.appendChild(createSelectRegion);
-
 let pokemonRegion = getPokemonRegion(filteredData)
-    //Agregando nuestros "Options" a nuestro "Select"
+//Agregando nuestros "Options" a nuestro "Select"
 pokemonRegion.forEach(regionActual => {
     let region = document.createElement("option");
     region.text = regionActual;
     createSelectRegion.appendChild(region);
 })
 document.getElementById("selectorRegion").addEventListener("change", (event) => {
-        filteredData = filterRegion(event.target.value);
-        document.getElementById("containerPokemon").innerHTML = "";
+    filteredData = filterRegion(event.target.value);
+    document.getElementById("containerPokemon").innerHTML = "";
 
-        filteredData.forEach(pokemonActual => {
-            createPokemonTypes(pokemonActual);
-        });
+    filteredData.forEach(pokemonActual => {
+        createPokemonTypes(pokemonActual);
+    });
 
-    })
-    //-------------------------Mostrar Pokemon--------------------------------
+})
 
-filteredData.forEach(pokemonActual => {
-    createPokemonTypes(pokemonActual);
-
-});
 //---------------------Ordenar Ascendente-Descendente-------------------
 //Creacion de selector de orden
 let selectorSort = document.getElementById("selectorSort")
@@ -163,5 +163,6 @@ document.getElementById("selectorSort").addEventListener("change", (event) => {
     document.getElementById("containerPokemon").innerHTML = "";
     filteredData.forEach(pokemonActual => {
         createPokemonTypes(pokemonActual);
+
     });
 })

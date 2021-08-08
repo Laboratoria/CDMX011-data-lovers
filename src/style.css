@@ -10,7 +10,7 @@ body {
 }
 
 
-/*Aqui empieza la edicion del header*/
+/*Aqui comienza la edición del header*/
 
 .container {
     width: 85%;
@@ -95,13 +95,11 @@ select {
     border-radius: 5px;
     color: #163faf;
 }
+/*Aqui termina la edición del header*/
 
-
-/*Aqui termina la edicion del header*/
 
 
 /*Contenedor de todos los div pokemon*/
-
 #containerPokemon {
     display: flex;
     flex-direction: row;
@@ -114,8 +112,8 @@ select {
     min-height: calc(110vh - 100px - 300px);
     /*Damos valor mínimo de altura*/
 }
-
-div.pokeDiv {
+/*Edición del div que contiene imágen e información*/
+.pokeDiv {
     justify-content: space-between;
     margin: 20px 10px;
     display: inline-block;
@@ -160,10 +158,7 @@ div.pokeDiv {
     color: rgb(4, 131, 182);
     transition: 0.5s;
 }
-
-
 /*imágenes de pokémon en pantalla*/
-
 .pokeImg {
     padding: 25px;
     transition: 0.5s ease-in-out;
@@ -176,6 +171,8 @@ div.pokeDiv {
     filter: drop-shadow(0 1em .4em #2a69f1);
 }
 
+
+/*Pié de página*/
 .footer {
     background-color: #f32020cb;
     color: #f0c73f;
@@ -185,6 +182,7 @@ div.pokeDiv {
     position: sticky;
 }
 
+/*Edición con botón para pantallas de máximo 1366px*/
 @media(max-width:1366px) {
     .logo-nav-container {
         display: flex;
@@ -204,14 +202,9 @@ div.pokeDiv {
     .menu-icon img {
         width: 50px;
         height: auto;
-     
         transition: all 0.4s linear;
     }
     .menu-icon img:hover{
-        transform: rotate(-180deg);
-        transition: all 0.9s ease-in-out;
-    }
-    .menu-icon img:hover {
         transform: rotate(-180deg);
         transition: all 0.9s ease-in-out;
     }
