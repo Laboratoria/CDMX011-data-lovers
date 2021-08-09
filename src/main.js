@@ -31,7 +31,7 @@ document.getElementById("menuBTN").addEventListener("click", () => {
 
 //-------- Creacion de div para mostrar los pokemon en la pagina inicial---------
 
-const createPokemonTypes = (dataPokemon) => {
+const creationPokemon = (dataPokemon) => {
 
     let contenedor = document.getElementById("containerPokemon"); /*Cramos variable para el contenedor de todos los div pokemon*/
     let mostrarPokemon = document.createElement("div"); /*Creamos div individual, el cuál guardará a un solo pokémon */
@@ -77,6 +77,11 @@ const createPokemonTypes = (dataPokemon) => {
     pokemonInfo.appendChild(info);
     mostrarPokemon.appendChild(pokemonInfo);
 };
+//-------------------------Renderea todos los pokemon en pantalla --------------------------------
+
+filteredData.forEach(pokemonActual => {//pokemonActual: Es la selección de pokemones para mostrar en pantalla
+    creationPokemon(pokemonActual);
+});
 
 //--------------------------------Creación de lista Type pokémon--------------------------------------
 
@@ -105,16 +110,12 @@ document.getElementById("selectorType").addEventListener("change", (event) => {
         filteredData = filterTypes(event.target.value);
         document.getElementById("containerPokemon").innerHTML = "";
         filteredData.forEach(pokemonActual => {
-            createPokemonTypes(pokemonActual);
+            creationPokemon(pokemonActual);
         });
     }
 
 })
-//-------------------------Mostrar Pokemon--------------------------------
 
-filteredData.forEach(pokemonActual => {
-    createPokemonTypes(pokemonActual);
-});
 
 //--------------------------------------Creación de Ordenar pokémon por generación--------------------------------
 let selectorRegion = document.getElementById("selectorRegion")
@@ -132,7 +133,7 @@ document.getElementById("selectorRegion").addEventListener("change", (event) => 
     document.getElementById("containerPokemon").innerHTML = "";
 
     filteredData.forEach(pokemonActual => {
-        createPokemonTypes(pokemonActual);
+        creationPokemon(pokemonActual);
     });
 
 })
@@ -162,7 +163,7 @@ document.getElementById("selectorSort").addEventListener("change", (event) => {
     filteredData = sortData(filteredData, userOption);
     document.getElementById("containerPokemon").innerHTML = "";
     filteredData.forEach(pokemonActual => {
-        createPokemonTypes(pokemonActual);
+        creationPokemon(pokemonActual);
 
     });
 })

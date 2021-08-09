@@ -38,6 +38,14 @@ describe('Show pokemon by types', () => {
         const result = filterTypes("poison", pokemonData);
         expect(result.length).toBe(3);
     })
+    it('show fire type', () => {
+        const result = filterTypes("fire", pokemonData);
+        expect(result.length).toBe(2);
+    })
+    it('show ice type', () => {
+        const result = filterTypes("ice", pokemonData);
+        expect(result.length).toBe(2);
+    })
 });
 
 describe('filter types by generation', () => {
