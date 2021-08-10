@@ -1,0 +1,130 @@
+*{
+    margin: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/img/fondo-portal.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: black;
+
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+       
+.section{
+    background: #8CBA51;
+    display: flex;
+}
+                    
+
+            .lot-articles{
+                background: #EEEEEE;
+                display: flex;
+                flex: 2 1 50%;
+                flex-flow: row wrap;
+
+            }
+
+            .articles{
+                background: #FFF3AF;
+                display: flex;
+                flex: 2 1 auto;
+                flex-flow: row wrap;
+                
+                
+                
+            }
+                .image{
+                    flex: 3 1 30%;
+                    height: 180px;
+                    width: 180px;
+                }
+                .name, .species, .gender ,.origin{
+                    font-size: small;
+                }
+            .pages{
+                background: #FFF3AF;
+                flex: 1 1 100%;
+            }
+
+            .curious-data{
+                background: #EEEEEE;
+ 
+            }
+
+            .curious{
+                background: #FFF3AF;
+            }
+
+.footer {
+    background: #8CBA51;
+}
+
+          .pie{
+             background: #FFF3AF;
+             display: flex;
+             flex-flow: column nowrap;
+             text-align: center;
+             }
+
+@media all and (max-width: 800px){
+    .section{
+        flex-direction: column;
+    }
+    .curious-data{
+        display: flex;
+        justify-content: center;
+    }
+}    
+
+@media all and (max-width: 600px) {
+    .lot-articles{
+        flex-direction: column;
+    }    
+}
+
+ul {
+    list-style:none;
+}
+.nav li a {
+    background-color:#000;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 15px;
+    display:block;
+}
+.nav>li{
+    float:none;
+}
+
+/*cambiar de color al pasar el mouse*/
+.nav li a:hover {
+    background-color:#434343;
+}
+
+
+/* se contrae el menu */
+/* .nav  li ul */ 
+/*.species, .gender, .seasons, .origin {
+    display: block;
+    
+    min-width:140px;
+}*/
+
+/* aparece el resto del menu al pasar el mous, los li que esten dentro de nav en su subclase 
+hover que aparezca que sean directos de ul */
+.nav li:hover > ul { 
+    display:block;
+} 
