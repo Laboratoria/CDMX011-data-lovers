@@ -5,39 +5,40 @@
     <meta charset="utf-8">
     <title>Indexador Pokemon</title>
     <link rel="stylesheet" href="style.css" />
-
 </head>
 
 <body>
     <img class="LogoPokemon" src="imagenes/logo_Pokemon-logo-497D61B223-seeklogo.com.png" widht="330px" height="175px">
-    <p>
-        <button type="button" id="tipo">TIPO</button>
-        <button type="button" id="generacion">GENERACION</button>
-        <button type="button" id="resistencia">RESISTENCIA</button>
-        <button type="button" id="debilidad">DEBILIDAD</button>
-    </p>
 
 
-    <select name="TYPE">
-        <option>TIPO</option>
-        <option>Avión</option>
-        <option>Tren</option>
+    <select id="type"> 
+        <option value="">Selecciona un tipo</option>
+        <option value="fire">Fuego</option>
+        <option value="water">Agua</option>
+        <option value="grass">Pasto</option>
+        <option value="electric">Electrico</option>
+        <option value="ghost">Fantasma</option>
+        <option value="poison">Veneno</option>
+        <option value="normal">Normal</option>
+        <option value="bug">Bicho</option>
+        <option value="flying">Volador</option>
+
         </select>
 
     <section>
         <input class="button" type="reset" value="RESET">
     </section>
-
     
-<div class = "box">
-    <h3>NOMBRE:</h3>
-    <p>NÚMERO:</p>
-    <p>PESO:</p>
-    <p>ALTURA:</p>
-    <img src>
-</div>
+
+    <footer class="footer"> <div class= "container">
+        <p>Copyright Laboratoria © Mex 2021</p>
+
+    </div>
+
+    </footer>
 
     <div id="root"></div>
+
     <script src="main.js" type="module"></script>
 </body>
 
