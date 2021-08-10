@@ -8,38 +8,58 @@
 </head>
 
 <body>
-    <img class="LogoPokemon" src="imagenes/logo_Pokemon-logo-497D61B223-seeklogo.com.png" widht="330px" height="175px">
-
-
-    <select id="type"> 
-        <option value="">Selecciona un tipo</option>
-        <option value="fire">Fuego</option>
-        <option value="water">Agua</option>
-        <option value="grass">Pasto</option>
-        <option value="electric">Electrico</option>
-        <option value="ghost">Fantasma</option>
-        <option value="poison">Veneno</option>
-        <option value="normal">Normal</option>
-        <option value="bug">Bicho</option>
-        <option value="flying">Volador</option>
-
-        </select>
-
-    <section>
-        <input class="button" type="reset" value="RESET">
+    <section class="logo">
+        <img id="LogoPokemon" src="imagenes/logo_Pokemon-logo-497D61B223-seeklogo.com.png" widht="340px" height="185px">
+        <img id="Pikachu" src="imagenes/pikachu.png" width="152" height="140">
+        <img id="GO" src="imagenes/GO.png" width="150" height="80">
     </section>
+
+    <main>
+        <section class="pokedex">  
+            <h1>¡Usa la búsqueda avanzada para encontrar un Pokemón!</h1>
+            <select class="types" id="types">
+                <option disabled selected>TIPO</option>
+                <option value="fire">FUEGO</option>
+                <option value="water">AGUA</option>
+                <option value="ground">TIERRA</option>
+                <option value="steel">ACERO</option>
+                <option value="bug">BICHO</option>
+                <option value="dragon">DRAGÓN</option>
+                <option value="electric">ELÉCTRICO</option>
+                <option value="ghost">FANTASMA</option>
+                <option value="fairy">HADA</option>
+                <option value="ice">HIELO</option>
+                <option value="fighting">LUCHA</option>
+                <option value="normal">NORMAL</option>
+                <option value="grass">PLANTA</option>
+                <option value="psiq">PSIQUICO</option>
+                <option value="rock">ROCA</option>
+                <option value="dark">SINIESTRO</option>
+                <option value="poison">VENENO</option>
+                <option value="flying">VOLADOR</option>
+            </select>
+
+            <select name="Srarity" id="Srarity">
+                <option disabled selected>RAREZA</option>
+                <option value="normal">NORMAL</option>
+                <option value="legendary">LEGENDARIO</option>
+                <option value="mythic">MÍTICO</option>
+            </select>
+
+            <select name="Sorder" id="Sorder">
+                <option disabled selected>ÓRDEN ALFABÉTICO</option>
+                <option value="az">a-z</option>
+                <option value="za">z-a</option>
+            </select>
+        </section>  
+            
+    </main>
     
-
-    <footer class="footer"> <div class= "container">
-        <p>Copyright Laboratoria © Mex 2021</p>
-
-    </div>
-
-    </footer>
-
+    
     <div id="root"></div>
 
     <script src="main.js" type="module"></script>
+
 </body>
 
 </html>
