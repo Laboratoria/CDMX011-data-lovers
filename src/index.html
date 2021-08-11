@@ -8,14 +8,15 @@
 </head>
 
 <body>
+    
     <section class="logo">
-        <img id="LogoPokemon" src="imagenes/logo_Pokemon-logo-497D61B223-seeklogo.com.png" widht="340px" height="185px">
         <img id="Pikachu" src="imagenes/pikachu.png" width="152" height="140">
+        <img id="LogoPokemon" src="imagenes/logo_Pokemon-logo-497D61B223-seeklogo.com.png" widht="340px" height="185px">
         <img id="GO" src="imagenes/GO.png" width="150" height="80">
     </section>
 
     <main>
-        <section class="pokedex">  
+        <div class="pokedex">  
             <h1>¡Usa la búsqueda avanzada para encontrar un Pokemón!</h1>
             <select class="types" id="types">
                 <option disabled selected>TIPO</option>
@@ -51,11 +52,15 @@
                 <option value="az">a-z</option>
                 <option value="za">z-a</option>
             </select>
-        </section>  
+
+            <input type="reset" id="Breset" value="RESET"> 
+
+        </div>  
             
     </main>
     
-    
+   
+
     <div id="root"></div>
 
     <script src="main.js" type="module"></script>
