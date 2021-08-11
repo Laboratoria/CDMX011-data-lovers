@@ -1,21 +1,12 @@
-/*Manipulación de datos a traves de arreglos y objetos (lógica)*/
-// estas funciones son de ejemplo
-/*export const pokemonType = type.filter(x =>) => {
+/*Funciones de ejemplo
+export const pokemonType = type.filter(x =>) => {
     return 'example';
 };
 
 export const anotherExample = () => {
     return 'OMG';
 };
-
-/*---Posible filtro para obtener tipos de pokemones---
-let allPokemon = [{data.pokemon}];
-let pokemonType == type.filter(function(type){
-    return pokemonType == "pokemon-type"; });
-console.log(pokemon-type);
-})
 */
-
 
 /*La función filterByType recibe en los () los datos del pokemon.js y rebibe los tipos de pokemon (pokemonType)
 ejecutamos el filtrado de los pokemones en dataPokemon.filter y nos retornará un resultado, ese resultado lo 
@@ -37,9 +28,7 @@ export function filterByType(dataPokemon, pokemonType) {
     return result;
 }
 
-/*export function filterByGeneration(dataPokemon, pokemonGeneration) {
-    let result = dataPokemon.filter(function (dataPokemon) {
-        return dataPokemon.generation.name == pokemonGeneration;
-    });
+export function filterByRarity(dataPokemon, pokemonRarity) {
+    let result = dataPokemon.filter((pokemons) => pokemons.pokemonrarity == pokemonRarity);
     return result;
-}*/
+}

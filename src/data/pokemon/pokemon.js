@@ -12,7 +12,7 @@ export default {
       "height": "0.71 m",
       "weight": "6.9 kg"
     },
-    "pokemon-rarity": "normal",
+    "pokemonrarity": "normal",
     "type": [
       "grass",
       "poison"

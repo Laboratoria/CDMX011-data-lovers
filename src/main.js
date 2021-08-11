@@ -1,6 +1,7 @@
 /*Manipulación del DOM*/
 import data from "./data/pokemon/pokemon.js";
 import { filterByType } from "./data.js";
+import {filterByRarity } from "./data.js";
 
 const dataPokemon = data.pokemon;
 
@@ -19,29 +20,22 @@ dataPokemon.forEach((eachPokemon) => {
 //parent element
 document.getElementById("root").innerHTML = pokemonHtml;
 
-//console.log(filterByType(dataPokemon, "poison"))
-
 //data.forEach
 //innerHTML
-//Añadimos un select y accedemos a el, le ponemos un addEventListener que detecte los cambios con el change, una vez que detecta el cambio ejecuta las funciones
-//Detectar el cambio del select con un addEventListener (que detecte los cambios con el change) change  y ejecutar la función filtrado
-//como el onclick pero aqui sera el change
-//Ejecutar filtrado por tipo pero en lugar de fire poner evento que mandamos
-//mediante event.target.value, para acceder al valor cuando le hacemos un cambio a select
-//nos dará acceso al valor cuando hacemos un cambio en select
 
-document.getElementById("type").addEventListener("change", function () {
-  const typeHtml = document.getElementById("type").value;
+//Filtrado por tipo de pokemón
+document.getElementById("types").addEventListener("change", function () {
+  const typeHtml = document.getElementById("types").value;
   const pokemonType = filterByType(dataPokemon, typeHtml);
 
   let showfilter = "";
-  pokemonType.forEach((filter) => {
+  pokemonType.forEach((filterType) => {
     showfilter += `<div class = "box">
-        <h3>NOMBRE:${filter.name}</h3>
-        <p>NÚMERO:${filter.num}</p>
-        <p>PESO:${filter.size.weight}</p>
-        <p>ALTURA:${filter.size.height}</p>
-        <img src="${filter.img}">
+        <h3>NOMBRE:${filterType.name}</h3>
+        <p>NÚMERO:${filterType.num}</p>
+        <p>PESO:${filterType.size.weight}</p>
+        <p>ALTURA:${filterType.size.height}</p>
+        <img src="${filterType.img}">
         </div>`;
   });
 
@@ -66,3 +60,21 @@ selectType.addEventListener('change', (event) => {
     document.getElementById("root").innerHTML=typePokemon
 
 });*/
+
+document.getElementById("rarity").addEventListener("change", function () {
+  const rarityHtml = document.getElementById("rarity").value;
+  const pokemonRarity = filterByRarity(dataPokemon, rarityHtml);
+
+  let showfilterR = "";
+  pokemonRarity.forEach((filterRarity) => {
+    showfilterR += `<div class = "box">
+        <h3>NOMBRE:${filterRarity.name}</h3>
+        <p>NÚMERO:${filterRarity.num}</p>
+        <p>PESO:${filterRarity.size.weight}</p>
+        <p>ALTURA:${filterRarity.size.height}</p>
+        <img src="${filterRarity.img}">
+        </div>`;
+  });
+
+  document.getElementById("root").innerHTML = showfilterR;
+});
