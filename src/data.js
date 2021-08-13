@@ -1,9 +1,62 @@
-// estas funciones son de ejemplo
+//Filtrado por tipo.
+export function filterType(pokemones,typePokemon){
+  let resultado=pokemones.filter(function(pokemones){
+    return pokemones.type == typePokemon;
+  })
+  
+     return resultado
+}
 
-export const example = () => {
-  return 'example';
-};
+//Ordenamos de forma Z-A
+export function sortZA (pokemones){
+  const sortedPokemons = pokemones.sort(function (a, b) {
+    if (a.name < b.name) {
+      return 1;
+    }
+    if (a.name > b.name) {
+      return -1
+    }
+      return 0;
+  });
+  
+       return sortedPokemons 
+}
+  
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+//Ordenamos de forma A-Z
+export function sortA (pokemones) {
+  let ordenaAscend = pokemones.sort(function (a, b) {
+    if (a.name > b.name) {
+      return 1;
+    }
+    if (a.name < b.name) {
+      return -1;
+    }
+      return 0;
+  });
+        return ordenaAscend 
+}
+
+export function statistics (pokemones){
+  let arrayKanto =0;
+  let arrayJohto = 0;
+
+   for(let i=0; i <pokemones.length; i++){
+    const region = pokemones [i].generation.name;
+      if (region ===  "kanto") {
+        arrayKanto = arrayKanto +1;
+      } else  {
+        arrayJohto = arrayJohto +1;
+      }
+  }
+
+
+ const percent1 = (arrayJohto/pokemones.length) *100
+ const percent2 = (arrayKanto/pokemones.length) *100
+
+ return [Math.round(percent1), Math.round(percent2)]
+}
+
+
+
+
