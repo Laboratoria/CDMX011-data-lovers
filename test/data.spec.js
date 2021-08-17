@@ -1,5 +1,5 @@
 
-import { filterGender, filterName, filterSpecie, filterStatus } from "../src/data.js";
+import { filterGender, filterName, filterSpecie, filterStatus, filterByName } from "../src/data.js";
 
 import { testCards, alienGoo, abadango,  } from "./mock.js";
 
@@ -44,8 +44,11 @@ describe("Bloque de ordenamiento ascendente", () => {
 
 });
 
-
-
+describe("Bloque filtrar por nombre", ()=> {
+  it("Deberia filtrar por nombre", ()=>{
+  expect(filterByName(alienGoo, "alien googah")).toStrictEqual(alienGoo)
+})
+})
 
 /*
 
@@ -58,7 +61,7 @@ describe("filterStatus", () => {
   it("deberia filtrar por status", () => {
     var items = [
       { name: "Edward", status: "Alive" },
-      { name: "Sharpe", status: "Dead" },
+      { name: "Sharpe", status: "Dead" }w,
       { name: "And", status: "unknown" },
       { name: "The", status: "Alive" },
       { name: "Magnetic", status: "Dead" },

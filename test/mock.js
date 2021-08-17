@@ -61,4 +61,12 @@ export const abadango = [
         "type": "",
         "gender": "Female",
         },
+        {
+            "id": 96,
+          "name": "Tuberculosis",
+          "status": "Dead",
+          "species": "Disease",
+          "type": "",
+          "gender": "unknown",
+        }
 ]
