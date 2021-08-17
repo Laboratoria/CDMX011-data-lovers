@@ -31,17 +31,20 @@ export function filterName(data, condition) {
     result = data.sort(function(a, b){
       if (a.name > b.name) {
         return 1
-      } else{
+      } if(a.name<b.name){
         return -1
       }
+      return 0
+      
     });
-  } else { //para ordenar de Z-A
+  } else if(condition ==="Z-A"){ //para ordenar de Z-A
     result = data.sort((a, b) => {
       if (a.name < b.name) {
         return 1
-      } else{
+      } if (a.name>b.name) {
         return -1
         }
+        return 0
     })
   }
   return result

@@ -12,7 +12,7 @@
 </head>
 <body>
   
-  <!--<div class="container"> -->
+  
     <header> Rick and Morty Universe
       <img id="logo" src="./data/imagenes/Mask Group.png" alt="logo">
     </header>
@@ -20,21 +20,18 @@
       <label><h2>Try our filter action on the show characters</h2></label>
     </nav>   
       <div id="selectors">
-        <!--<label>Status</label>-->
         <select id="status">
           <option disabled selected>Status</option>
           <option>Alive</option>
           <option>Dead</option>
           <option>unknown</option>
         </select>
-        <!--<label>Gender</label>-->
         <select id="gender">
           <option disabled selected>Gender</option>
           <option>Female</option>
           <option>Male</option>
           <option>unknown</option>
         </select>
-        <!--<label>Species</label>-->
         <select id="species">
           <option disabled selected>Species</option>
           <option>Human</option>
@@ -47,21 +44,20 @@
           <option>Cronenberg</option>
           <option>unknown</option>
         </select>
-        <!--<label>Sort Order</label>-->
         <select id="order">
           <option disabled selected>Sort Order</option>
           <option>A-Z</option>
           <option>Z-A</option>
         </select>
+        <input type= "text" id="input" placeholder= "search by name" />
+      <button id="button">Buscar</button>
       </div>
-      <input type= "text" id="input" placeholder= "shearch" />
-      <button id="buscar">Buscar</button>
+      
     
     <main>
-      <div id="filtrado"></div>
       <div id="root"></div>
       <script src="main.js" type="module"></script>
     </main>
-  <!--</div> -->
+  
 </body>
 </html>

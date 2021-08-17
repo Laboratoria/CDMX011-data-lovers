@@ -46,9 +46,9 @@ describe("Bloque de ordenamiento ascendente", () => {
 
 describe("Bloque filtrar por nombre", ()=> {
   it("Deberia filtrar por nombre", ()=>{
-  expect(filterByName(alienGoo, "alien googah")).toStrictEqual(alienGoo)
+  expect(filterByName(alienGoo, "alien googah")).toEqual(alienGoo)
 })
-})
+}) 
 
 /*
 

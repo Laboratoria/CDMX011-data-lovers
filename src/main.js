@@ -110,7 +110,7 @@ document.getElementById("species").addEventListener("change", function(){
 })
 
 //Filtrar por nombre
-document.getElementById("buscar").addEventListener("click", function (){
+document.getElementById("button").addEventListener("click", function (){
   const input= document.getElementById("input").value
   const buscar = filterByName(characters, input)
   let buscarByName = ""
