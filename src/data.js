@@ -1,29 +1,36 @@
-/*Manipulación de datos a traves de arreglos y objetos (lógica)*/
-// estas funciones son de ejemplo
-/*export const pokemonType = type.filter(x =>) => {
-    return 'example';
-};
 
-export const anotherExample = () => {
-    return 'OMG';
-};
-
-
-/*---Posible filtro para obtener tipos de pokemones---
-let allPokemon = [{data.pokemon}];
-let pokemonType == type.filter(function(type){
-    return pokemonType == "pokemon-type"; });
-console.log(pokemon-type);
-})
-*/
-
-/*import data from './data/pokemon/pokemon.js';
-console.log()*/
-
-export function filterByType(dataPokemon, pokemonType){
-    let result = dataPokemon.filter(function(dataPokemon){
-                    return dataPokemon.type == pokemonType;
+export function filterByType(allPokemon, pokemonType) {
+    return allPokemon.filter(function (allPokemon) {
+        return allPokemon.type.includes(pokemonType)
     })
-    return result
 }
 
+export function filterByGeneration(allPokemon, pokemonGeneration) {
+    return allPokemon.filter(function (allPokemon) {
+        return allPokemon.generation.name.includes(pokemonGeneration)
+    })
+}
+
+export function alphabeticOrder(allPokemon, condition) {
+    let result = ""
+      if (condition === "A-Z") {
+        result = allPokemon.sort(function(a, b){
+          if (a.name > b.name) {
+            return 1
+          } if(a.name<b.name){
+            return -1
+          }
+          return 0
+        });
+      } else if(condition ==="Z-A"){ 
+        result = allPokemon.sort((a, b) => {
+          if (a.name < b.name) {
+            return 1
+          } if (a.name>b.name) {
+            return -1
+            }
+            return 0
+        })
+      }
+      return result
+    }
