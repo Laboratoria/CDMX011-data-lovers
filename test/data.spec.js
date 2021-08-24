@@ -1,6 +1,18 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterByType } from "../src/data.js";
 
+describe("filterByType", () => {
+  it("should be a function", () => {
+    expect(typeof filterByType).toBe("function");
+  });
 
+  it("returns `la data pokemon debe ser filtrada por tipo`", () => {
+    expect(() => (filterByType).toThrow("pokemonType"));
+  });
+});
+
+//import { example, anotherExample } from '../src/data.js';
+
+/*
 describe('example', () => {
   it('is a function', () => {
     expect(typeof example).toBe('function');
@@ -12,6 +24,8 @@ describe('example', () => {
 });
 
 
+
+
 describe('anotherExample', () => {
   it('is a function', () => {
     expect(typeof anotherExample).toBe('function');
@@ -21,3 +35,4 @@ describe('anotherExample', () => {
     expect(anotherExample()).toBe('OMG');
   });
 });
+*/

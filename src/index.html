@@ -1,70 +1,78 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Indexador Pokemon</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pokedex</title>
+    
     <link rel="stylesheet" href="style.css" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-    
-    <section class="logo">
-        <img id="Pikachu" src="imagenes/pikachu.png" width="152" height="140">
-        <img id="LogoPokemon" src="imagenes/logo_Pokemon-logo-497D61B223-seeklogo.com.png" widht="340px" height="185px">
-        <img id="GO" src="imagenes/GO.png" width="150" height="80">
-    </section>
+  <body>
 
-    <main>
-        <div class="pokedex">  
-            <h1>¡Usa la búsqueda avanzada para encontrar un Pokemón!</h1>
-            <select class="types" id="types">
-                <option disabled selected>TIPO</option>
-                <option value="fire">FUEGO</option>
-                <option value="water">AGUA</option>
-                <option value="ground">TIERRA</option>
-                <option value="steel">ACERO</option>
-                <option value="bug">BICHO</option>
-                <option value="dragon">DRAGÓN</option>
-                <option value="electric">ELÉCTRICO</option>
-                <option value="ghost">FANTASMA</option>
-                <option value="fairy">HADA</option>
-                <option value="ice">HIELO</option>
-                <option value="fighting">LUCHA</option>
-                <option value="normal">NORMAL</option>
-                <option value="grass">PLANTA</option>
-                <option value="psiq">PSIQUICO</option>
-                <option value="rock">ROCA</option>
-                <option value="dark">SINIESTRO</option>
-                <option value="poison">VENENO</option>
-                <option value="flying">VOLADOR</option>
-            </select>
+    <header>
+      <div class="pokedex">
+        <img id="Pikachu" src="imagenes/pikachu.png" width="142" height="130" />
+        <img id="LogoPokemon" src="imagenes/Logo_Pokemon.png" widht="330px" height="175px" />
+        <img id="GO" src="imagenes/GO.png" width="140" height="70" />
+      </div>
+    </header>
 
-            <select name="Srarity" id="rarity">
-                <option disabled selected>RAREZA</option>
-                <option value="normal">NORMAL</option>
-                <option value="legendary">LEGENDARIO</option>
-                <option value="mythic">MÍTICO</option>
-            </select>
+        <main>
+          <h1>¡Usa la búsqueda avanzada para encontrar un Pokemón!</h1>
+          <select id="types" name="types">
+            <option disabled selected>TIPO</option>
+            <option value="fire">FUEGO</option>
+            <option value="water">AGUA</option>
+            <option value="ground">TIERRA</option>
+            <option value="steel">ACERO</option>
+            <option value="bug">BICHO</option>
+            <option value="dragon">DRAGÓN</option>
+            <option value="electric">ELÉCTRICO</option>
+            <option value="ghost">FANTASMA</option>
+            <option value="fairy">HADA</option>
+            <option value="ice">HIELO</option>
+            <option value="fighting">LUCHA</option>
+            <option value="normal">NORMAL</option>
+            <option value="grass">PLANTA</option>
+            <option value="psychic">PSIQUICO</option>
+            <option value="rock">ROCA</option>
+            <option value="dark">SINIESTRO</option>
+            <option value="poison">VENENO</option>
+            <option value="flying">VOLADOR</option>
+          </select>
 
-            <select name="Sorder" id="Sorder">
-                <option disabled selected>ÓRDEN ALFABÉTICO</option>
-                <option value="az">a-z</option>
-                <option value="za">z-a</option>
-            </select>
+          <select name="generation" id="generation">
+            <option disabled selected>GENERACIÓN</option>
+            <option value="kanto">KANTO</option>
+            <option value="johto">JOHTO</option>
+          </select>
 
-            <input type="reset" id="Breset" value="RESET"> 
+          <select name= "Sorder" id= "order" >
+            <option disabled selected>ORDEN ALFABÉTICO</option>
+            <option>A-Z</option>
+            <option>Z-A</option>
+          </select>
 
-        </div>  
-            
-    </main>
-    
-   
+        </main>
+      </div>
+
+
+   <form>
+       <button id=reset class="btn" type="reset" value="Reset" onclick="history.go()">LIMPIAR BÚSQUEDA</button>
+    </form>
 
     <div id="root"></div>
 
+    <footer>
+      <br>Realizado por Aleisi Cruz y Alejandra Gonzalez </br> 
+      <br>Copyright © Mex 2021 </br>
+    
+    </footer>
+
     <script src="main.js" type="module"></script>
-
-</body>
-
+  </body>
 </html>

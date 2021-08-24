@@ -1,80 +1,141 @@
 /*Manipulación del DOM*/
 import data from "./data/pokemon/pokemon.js";
-import { filterByType } from "./data.js";
-import {filterByRarity } from "./data.js";
+import { filterByType, filterByGeneration, alphabeticOrder } from "./data.js";
 
-const dataPokemon = data.pokemon;
 
-// Primera pantalla donde muestra todos los pokemones
+const allPokemon = data.pokemon;
+
+
 let pokemonHtml = "";
-
-dataPokemon.forEach((eachPokemon) => {
-  pokemonHtml += `<div class = "box">
-    <h3>NOMBRE:${eachPokemon.name}</h3>
-    <p>NÚMERO:${eachPokemon.num}</p>
-    <p>PESO:${eachPokemon.size.weight}</p>
-    <p>ALTURA:${eachPokemon.size.height}</p>
+allPokemon.forEach((eachPokemon) => {
+  pokemonHtml += `
+    <div class = "box">
+    <h4>${eachPokemon.name.toUpperCase()}</h4>
     <img src="${eachPokemon.img}">
+    <p>Número: ${eachPokemon.num}</p>
+    <p>Peso: ${eachPokemon.size.weight}</p>
+    <p>Altura:  ${eachPokemon.size.height}</p>
+    </div>
     </div>`;
 });
 //parent element
 document.getElementById("root").innerHTML = pokemonHtml;
 
-//data.forEach
-//innerHTML
 
-//Filtrado por tipo de pokemón
 document.getElementById("types").addEventListener("change", function () {
   const typeHtml = document.getElementById("types").value;
-  const pokemonType = filterByType(dataPokemon, typeHtml);
-
+  const pokemonTypes = filterByType(allPokemon, typeHtml)
   let showfilter = "";
-  pokemonType.forEach((filterType) => {
-    showfilter += `<div class = "box">
-        <h3>NOMBRE:${filterType.name}</h3>
-        <p>NÚMERO:${filterType.num}</p>
-        <p>PESO:${filterType.size.weight}</p>
-        <p>ALTURA:${filterType.size.height}</p>
+  pokemonTypes.forEach((filterType) => { 
+    showfilter += `
+        <div class = "box">
+        <h4>${filterType.name.toUpperCase()}</h4>
         <img src="${filterType.img}">
+        <p>Número: ${filterType.num}</p>
+        <p>Peso: ${filterType.size.weight}</p>
+        <p>Altura: ${filterType.size.height}</p>
+                </div>
         </div>`;
   });
-
   document.getElementById("root").innerHTML = showfilter;
 });
 
-/*const selectType = document.querySelector('.filter')
 
-selectType.addEventListener('change', (event) => {
-    const pokemonFilter = filterByType(dataPokemon,event.target.value);
-    const typePokemon = pokemonFilter.map((categoryPokemon) =>
-
-    `<div class = "box">
-    <h3>NOMBRE:${categoryPokemon.name}</h3>
-    <p>NÚMERO:${categoryPokemon.num}</p>
-    <p>PESO:${categoryPokemon.size.weight}</p>
-    <p>ALTURA:${categoryPokemon.size.height}</p>
-    <img src="${categoryPokemon.img}">
-    </div>`
-    )
-
-    document.getElementById("root").innerHTML=typePokemon
-
-});*/
-
-document.getElementById("rarity").addEventListener("change", function () {
-  const rarityHtml = document.getElementById("rarity").value;
-  const pokemonRarity = filterByRarity(dataPokemon, rarityHtml);
-
-  let showfilterR = "";
-  pokemonRarity.forEach((filterRarity) => {
-    showfilterR += `<div class = "box">
-        <h3>NOMBRE:${filterRarity.name}</h3>
-        <p>NÚMERO:${filterRarity.num}</p>
-        <p>PESO:${filterRarity.size.weight}</p>
-        <p>ALTURA:${filterRarity.size.height}</p>
-        <img src="${filterRarity.img}">
-        </div>`;
+document.getElementById("generation").addEventListener("change", function () {
+  const generationHtml = document.getElementById("generation").value;
+  const pokemonGeneration = filterByGeneration(allPokemon, generationHtml);
+  let showfilterG = "";
+  pokemonGeneration.forEach((filterG) => {
+    showfilterG += `
+    <div class = "box">
+    <h4>${filterG.name.toUpperCase()}</h4>
+    <img src="${filterG.img}">
+    <p>Número: ${filterG.num}</p>
+    <p>Peso: ${filterG.size.weight}</p>
+    <p>Altura: ${filterG.size.height}</p>
+        </div>
+   </div>`;
   });
-
-  document.getElementById("root").innerHTML = showfilterR;
+  document.getElementById("root").innerHTML = showfilterG;
 });
+
+
+document.getElementById("order").addEventListener("change", function () {
+  const orderHtml = document.getElementById("order").value;
+  const orderAlph = alphabeticOrder(allPokemon, orderHtml);
+  let showOrder = "";
+  orderAlph.forEach((sortPokemon) => {
+    showOrder += `
+    <div class = "box">
+    <h4>${sortPokemon.name.toUpperCase()}</h4>
+    <img src="${sortPokemon.img}">
+    <p>Número: ${sortPokemon.num}</p>
+    <p>Peso: ${sortPokemon.size.weight}</p>
+    <p>Altura: ${sortPokemon.size.height}</p>
+        </div>
+   </div>`;
+  });
+  document.getElementById("root").innerHTML = showOrder;
+});
+
+
+// document.getElementById("orderAZ").addEventListener("click", function () {
+//   const orderHtml = document.getElementById("orderAZ").value;
+//   const orderAbc = alphabeticOrder(allPokemon, orderHtml)
+//    let showOrder =""
+//    orderAbc.forEach(sortPokemon => {
+//         showOrder += `<div class="container">
+//         <div class = "box">
+//         <h4>${sortPokemon.name.toUpperCase()}</h4>
+//         <img src="${sortPokemon.img}">
+//         <p>Número: ${sortPokemon.num}</p>
+//         <p>Peso: ${sortPokemon.size.weight}</p>
+//         <p>Altura: ${sortPokemon.size.height}</p>
+//             </div>
+//        </div>`;
+//   })
+//   document.getElementById("root").innerHTML = showOrder;
+// });
+
+
+// document.getElementById("orderZA").addEventListener("click", function () {
+//   const orderHtml = document.getElementById("orderZA").value;
+//   const orderAbc = alphabeticOrder(allPokemon, orderHtml)
+//    let showOrder =""
+//    orderAbc.forEach(sortPokemon => {
+//         showOrder += `<div class="container">
+//         <div class = "box">
+//         <h4>${sortPokemon.name.toUpperCase()}</h4>
+//         <img src="${sortPokemon.img}">
+//         <p>Número: ${sortPokemon.num}</p>
+//         <p>Peso: ${sortPokemon.size.weight}</p>
+//         <p>Altura: ${sortPokemon.size.height}</p>
+//             </div>
+//        </div>`;
+//   })
+//   document.getElementById("root").innerHTML = showOrder;
+// });
+
+
+// document.getElementById("orderA-Z").addEventListener("change", function () {
+//   const orderHtml = document.getElementById("order").value;
+//   const orderAsc = orderAZ(allPokemon, orderHtml)
+
+//   let showOrderAZ ="";
+//   orderAsc.forEach((orderAZ) => {
+//     showOrderAZ += `<div class="container">
+//     <div class = "box">
+//     <h4>${orderAZ.name.toUpperCase()}</h4>
+//     <img src="${orderAZ.img}">
+//     <p>Número: ${orderAZ.num}</p>
+//     <p>Peso: ${orderAZ.size.weight}</p>
+//     <p>Altura: ${orderAZ.size.height}</p>
+//             </div>
+//     </div>`;
+//   } )
+
+//   document.getElementById("root").innerHTML = showOrderAZ;
+
+// });
+
+
