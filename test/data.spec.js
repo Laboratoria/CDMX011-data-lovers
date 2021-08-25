@@ -1,14 +1,19 @@
-import { filterByType } from "../src/data.js";
+import {data} from '../src/data.js'
+import { pokemonMock } from './dataMock.js';
 
-describe("filterByType", () => {
-  it("should be a function", () => {
-    expect(typeof filterByType).toBe("function");
+const pokemones = pokemonMock
+
+describe('returns the types of pokemon', () => {
+  it('should be a function', () => {
+    expect(typeof data.filterByType).toBe('function');
   });
 
-  it("returns `la data pokemon debe ser filtrada por tipo`", () => {
-    expect(() => (filterByType).toThrow("pokemonType"));
+  it('the function should return the types', () => {
+    expect(data.filterByType(pokemones, 'fire')).toHaveLength(0);
   });
 });
+
+
 //import { example, anotherExample } from '../src/data.js';
 
 //import { example, anotherExample } from '../src/data.js';
