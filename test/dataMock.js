@@ -289,53 +289,57 @@ export const pokemonMock = [
       },
 ]
 
-export const squirtleMock = [
-    {
-        "num": "007",
-        "name": "squirtle",
+export const bulbasaurMock = [
+   {
+        "num": "001",
+        "name": "bulbasaur",
         "generation": {
           "num": "generation i",
           "name": "kanto"
         },
-        "about": "Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.",
-        "img": "https://www.serebii.net/pokemongo/pokemon/007.png",
+        "about": "Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.",
+        "img": "https://www.serebii.net/pokemongo/pokemon/001.png",
         "size": {
-          "height": "0.51 m",
-          "weight": "9.0 kg"
+          "height": "0.71 m",
+          "weight": "6.9 kg"
         },
         "pokemon-rarity": "normal",
         "type": [
-          "water"
+          "grass",
+          "poison"
         ],
         "encounter": {
           "base-flee-rate": "0.1",
           "base-capture-rate": "0.2"
         },
-        "spawn-chance": "0.58",
+        "spawn-chance": "0.69",
         "stats": {
-          "base-attack": "94",
-          "base-defense": "121",
-          "base-stamina": "127",
-          "max-cp": "946",
-          "max-hp": "112"
+          "base-attack": "118",
+          "base-defense": "111",
+          "base-stamina": "128",
+          "max-cp": "1115",
+          "max-hp": "113"
         },
         "resistant": [
-          "fire",
           "water",
-          "ice",
-          "steel"
+          "electric",
+          "grass",
+          "fighting",
+          "fairy"
         ],
         "weaknesses": [
-          "electric",
-          "grass"
+          "fire",
+          "ice",
+          "flying",
+          "psychic"
         ],
         "quick-move": [
           {
-            "name": "bubble",
-            "type": "water",
-            "base-damage": "12",
-            "energy": "14",
-            "move-duration-seg": "1.2"
+            "name": "vine whip",
+            "type": "grass",
+            "base-damage": "7",
+            "energy": "6",
+            "move-duration-seg": "0.6"
           },
           {
             "name": "tackle",
@@ -347,41 +351,42 @@ export const squirtleMock = [
         ],
         "special-attack": [
           {
-            "name": "aqua jet",
-            "type": "water",
-            "base-damage": "45",
-            "energy": "-33",
-            "move-duration-seg": "2.6"
-          },
-          {
-            "name": "aqua tail",
-            "type": "water",
-            "base-damage": "50",
-            "energy": "-33",
-            "move-duration-seg": "1.9"
-          },
-          {
-            "name": "water pulse",
-            "type": "water",
-            "base-damage": "70",
+            "name": "sludge bomb",
+            "type": "poison",
+            "base-damage": "80",
             "energy": "-50",
-            "move-duration-seg": "3.2"
+            "move-duration-seg": "2.3"
+          },
+          {
+            "name": "seed bomb",
+            "type": "grass",
+            "base-damage": "55",
+            "energy": "-33",
+            "move-duration-seg": "2.1"
+          },
+          {
+            "name": "power whip",
+            "type": "grass",
+            "base-damage": "90",
+            "energy": "-50",
+            "move-duration-seg": "2.6"
           }
         ],
         "egg": "2 km",
         "buddy-distance-km": "3",
         "evolution": {
-          "candy": "squirtle candy",
+          "candy": "bulbasaur candy",
           "next-evolution": [{
-            "num": "008",
-            "name": "wartortle",
+            "num": "002",
+            "name": "ivysaur",
             "candy-cost": "25",
             "next-evolution": [{
-              "num": "009",
-              "name": "blastoise",
+              "num": "003",
+              "name": "venusaur",
               "candy-cost": "100"
             }]
           }]
         }
       },
+    
 ]
