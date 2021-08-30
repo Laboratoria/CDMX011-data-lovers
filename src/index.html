@@ -6,21 +6,23 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap"
       rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
   </head>
+
   <body>
     <header>
-      <div class="pokedex">
         <div class="logoImagenes">
-         <img id="Pikachu" src="imagenes/pikachu.png" width="132" height="120" />
-         <img id="LogoPokemon" src="imagenes/logo_Pokemon.png" widht="340px" height="185px" />
-         <img id="GO" src="imagenes/GO.png" width="125" height="65" />
-        </div>  
-      </div>
-    </header>   
-    <main>
+         <a href="https://detectivepikachu.pokemon.com/en-us/"><img src="imagenes/pikachu.png" alt="Pikachu" width="129" height="120"/></a>
+         <a href="index.html"><img src="imagenes/logo_Pokemon.png" widht="310px" height="160px"/></a>
+         <a href="https://pokemongolive.com/es_mx/"><img src="imagenes/GO.png" width="125" height="65"/></a>
+        </div>
+    </header>
+
+    
         <div id="texto">
             <h1>¡Usa la búsqueda avanzada para encontrar un Pokemón!</h1>
         </div>
+
         <div class="selects">
             <select id="types" name="types">
               <option disabled selected>TIPO</option>
@@ -37,27 +39,28 @@
               <option value="fighting">LUCHA</option>
               <option value="normal">NORMAL</option>
               <option value="grass">PLANTA</option>
-              <option value="psiq">PSIQUICO</option>
+              <option value="psychic">PSIQUICO</option>
               <option value="rock">ROCA</option>
               <option value="dark">SINIESTRO</option>
               <option value="poison">VENENO</option>
               <option value="flying">VOLADOR</option>
             </select>
-            <select name="generation" id="generation">
+
+            <select id="generation" name="generation">
               <option disabled selected>GENERACIÓN</option>
               <option value="kanto">KANTO</option>
               <option value="johto">JOHTO</option>
             </select>
-            <select name= "Aorder" id= "orderAZ" >
-              <option disabled selected>ORDEN ALFABÉTICO</option>
+            
+            <select id= "order" name= "order">
+              <option disabled selected>ORDENA POR: </option>
               <option>A-Z</option>
               <option>Z-A</option>
             </select>
-            <!-- <button id="orderAZ" value="A-Z">A-Z</button>
-            <button id="orderZA" value="Z-A">Z-A</button> -->
+
             <button type="reset" id="reset" onclick="history.go(0)">LIMPIAR BÚSQUEDA</button>
-        </div>
-    </main>
+
+          </div>
    
     <div id="root"></div>
     <script src="main.js" type="module"></script>

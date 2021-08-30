@@ -1,190 +1,136 @@
-* { 
-    box-sizing: border-box;
-  } 
-  body {
-    background-image: url(imagenes/paisaje_fondo.png);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-  }
-  .pokedex {
-    background: transparent;
-    display: flex;
-    height: 210px;
-    width: 100%;
-    position: relative;
-    justify-content: space-around;
-    align-items: center;
-  }  
-  .logoImagenes{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-   
-  }
-  /* #Pikachu{
-    display:flex;
-    align-items: center;
-    left: 100px;
-  }
-  #LogoPokemon{
-  display:flex;
-  align-items: center;
-  }
-  #GO{
+/* * { 
+  box-sizing: border-box;
+} */
+body {
+  background-image: url(imagenes/paisaje_fondo.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+.logoImagenes {
   display: flex;
-align-items: center;
-  } */
-  .selects{
-    background: crimson;
-    align-items: center;
+  height: 210px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.selects{
+  background: crimson;
+  align-items: center;
+  display: flex;
+  height: 70px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+#texto{
+  background: crimson;
     display: flex;
-    height: 70px;
-    width: 100%;
+    height: 60px;
     justify-content: space-evenly;
-    border: .5px solid oldlace;
-    
-    /*  */
-    /* align-items: center;
-    justify-content: space-around;
-    height: 90px;
-    max-width: 1500px;
-    top: 57px;
-    margin: 5px auto;
-    padding: 10px;
-    position: relative; */
-  }
-  #texto{
-      background: crimson;
-      display: flex;
-      height: 65px;
-      justify-content: space-evenly;
-      border: .5px solid oldlace;
-  }
-   H1 {
+    border: none;
     color: white;
-    font-family: "Encode Sans", sans-serif;
-    font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
     text-align: center;
     font-weight: normal;
     text-shadow: 3px 0px 0px rgb(11, 48, 116), 0px 2px 0px rgb(11, 48, 116),
       -2px 0px 0px rgb(11, 48, 116), 0px -2px 0px rgb(11, 48, 116);
     position:relative;
-  }
-  #types {
-    color: yellow;
-    background: rgb(19, 63, 121);
-    border: oldlace;
-    height: 30px;
-    width: 143px;
-    font-size: 18px;
-    text-align: center;
-    letter-spacing: 0.11em;
-    border-radius: 5px;
-    border: 2px solid oldlace;
-    box-shadow: 1px 2px 1px black;
-    position: relative;
-  }
-  #generation {
-    color: rgb(255, 251, 0);
-    background: rgb(19, 63, 121);
-    border: oldlace;
-    height: 30px;
-    width: 180px;
-    font-size: 18px;
-    text-align: center;
-    letter-spacing: 0.11em;
-    border: 2px solid oldlace;
-    border-radius: 5px;
-    box-shadow: 1px 2px 1px black;
-    position: relative;
-  }
-  #orderAZ {
-    color: yellow;
-    background: rgb(19, 63, 121);
-    border: oldlace;
-    height: 30px;
-    width: 230px;
-    font-size: 18px;
-    text-align: center;
-    letter-spacing: 0.11em;
-    border: 2px solid oldlace;
-    border-radius: 5px;
-    box-shadow: 1px 2px 1px black;
-    position: relative;
-  }
-  #reset {
-    color: yellow;
-    background: rgb(19, 63, 121);
-    height: 32px;
-    width: 240px;
-    font-size: 18px;
-    letter-spacing: 0.11em;
-    border: 2px solid oldlace;
-    border-radius: 30px;
-    box-shadow: 1px 2px 1px black;
-    position: relative;
-  }  
-  .flex-container {
-    display: flex;
-    justify-content: center;
-    padding: 10px; 
-  }
-  .box {
-    float: left;
-    top: 65px;
-    margin: 10px;
-    /* margin-right: 10px;
-    position: relative;
-    margin-left: 15px; */
-    height: 330px;
-    width: 212px;
-    border-radius: 11px;
-    background: black;
-    border: 3px solid oldlace;
-    font-family: "Encode Sans", sans-serif;
-    color: #26CA26;
-    text-align: center;
-    font-size: 18px;
-  }
-  .box:hover {
-    background-color: rgb(223, 223, 235) ;
-    color: black;
-    transform: scale(1.03);
-    transition: all 1s ease;
-  }
-  /*.box {
-    position: relative;
-    top: 65px;
-    width: 250px;
-    height: 270px;
-    margin: 9.5px;
-    background: black;
-    border-radius: 10px;
-    border: 3px solid cornsilk;
-    font-family: "Encode Sans", sans-serif;
-    color: #26CA26;
-    text-align: center;
-    font-size: 14px;
-    overflow: hidden;
-  }*/
-  footer{
-    display:flex;
-    background: crimson;
-    width: 100%;
-    height: 42px;
-    color: white;
-    font-family: "Encode Sans", sans-serif;
-    font-size: 14px;
-    text-align: center;
-    font-weight: lighter;
-    justify-content: center;
-    
-  }
-  
-  
-  
-  
-  
+}
+
+#types {
+  font-family: 'Quicksand', sans-serif;
+  color: yellow;
+  background: rgb(19, 63, 121);
+  border: oldlace;
+  height: 30px;
+  width: 143px;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.11em;
+  border-radius: 5px;
+  border: 2px solid oldlace;
+  box-shadow: 1px 2px 1px black;
+  position: relative;
+}
+#generation {
+  font-family: 'Quicksand', sans-serif;
+  color: rgb(255, 251, 0);
+  background: rgb(19, 63, 121);
+  border: oldlace;
+  height: 30px;
+  width: 180px;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.11em;
+  border: 2px solid oldlace;
+  border-radius: 5px;
+  box-shadow: 1px 2px 1px black;
+  position: relative;
+}
+#order {
+  font-family: 'Quicksand', sans-serif;
+  color: yellow;
+  background: rgb(19, 63, 121);
+  border: oldlace;
+  height: 30px;
+  width: 180px;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.11em;
+  border: 2px solid oldlace;
+  border-radius: 5px;
+  box-shadow: 1px 2px 1px black;
+  position: relative;
+}
+#reset {
+  font-family: 'Quicksand', sans-serif;
+  color: yellow;
+  background: rgb(19, 63, 121);
+  height: 32px;
+  width: 240px;
+  font-size: 18px;
+  letter-spacing: 0.11em;
+  border: 2px solid oldlace;
+  border-radius: 30px;
+  box-shadow: 1px 2px 1px black;
+  position: relative;
+}  
+ .container {
+  display:flex;
+  display:inline-block;
+  width:20%;
+  justify-content:space-between;
+} 
+.box {
+  top:65px;
+  margin: 13px;
+  height: 330px;
+  border-radius: 11px;
+  background: rgb(15, 15, 15);
+  border: 3px solid oldlace;
+  font-family: "Encode Sans", sans-serif;
+  color: #26CA26;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 0.8px
+}
+.box:hover {
+  background-color: rgb(223, 223, 235) ;
+  color: black;
+  transform: scale(1.03);
+  transition: all 1s ease;
+}
+footer{
+  display:flex;
+  background: crimson;
+  width: 100%;
+  height: 42px;
+  color: white;
+  font-family: "Encode Sans", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  font-weight: lighter;
+  justify-content: center;
+}
