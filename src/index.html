@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <meta charset="utf-8" />
+    <title>Pokedex</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&display=swap"
+      rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
   </head>
+
   <body>
+    <header>
+        <div class="logoImagenes">
+         <a href="https://detectivepikachu.pokemon.com/en-us/"><img src="imagenes/pikachu.png" alt="Pikachu" width="129" height="120"/></a>
+         <a href="index.html"><img src="imagenes/logo_Pokemon.png" widht="310px" height="160px"/></a>
+         <a href="https://pokemongolive.com/es_mx/"><img src="imagenes/GO.png" width="125" height="65"/></a>
+        </div>
+    </header>
+
+    
+        <div id="texto">
+            <h1>¡Usa la búsqueda avanzada para encontrar un Pokemón!</h1>
+        </div>
+
+        <div class="selects">
+            <select id="types" name="types">
+              <option disabled selected>TIPO</option>
+              <option value="fire">FUEGO</option>
+              <option value="water">AGUA</option>
+              <option value="ground">TIERRA</option>
+              <option value="steel">ACERO</option>
+              <option value="bug">BICHO</option>
+              <option value="dragon">DRAGÓN</option>
+              <option value="electric">ELÉCTRICO</option>
+              <option value="ghost">FANTASMA</option>
+              <option value="fairy">HADA</option>
+              <option value="ice">HIELO</option>
+              <option value="fighting">LUCHA</option>
+              <option value="normal">NORMAL</option>
+              <option value="grass">PLANTA</option>
+              <option value="psychic">PSIQUICO</option>
+              <option value="rock">ROCA</option>
+              <option value="dark">SINIESTRO</option>
+              <option value="poison">VENENO</option>
+              <option value="flying">VOLADOR</option>
+            </select>
+
+            <select id="generation" name="generation">
+              <option disabled selected>GENERACIÓN</option>
+              <option value="kanto">KANTO</option>
+              <option value="johto">JOHTO</option>
+            </select>
+            
+            <select id= "order" name= "order">
+              <option disabled selected>ORDENA POR: </option>
+              <option>A-Z</option>
+              <option>Z-A</option>
+            </select>
+
+            <button type="reset" id="reset" onclick="history.go(0)">LIMPIAR BÚSQUEDA</button>
+
+          </div>
+   
     <div id="root"></div>
     <script src="main.js" type="module"></script>
+  
+  <footer>© 2021 Indexador Pokemon<br>
+    Creado por Aleisi Cruz y Alejandra González.
+  </footer>  
+  
   </body>
 </html>
