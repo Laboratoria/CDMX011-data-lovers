@@ -5,8 +5,69 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div id="root"></div>
+    <header>
+      <img class="logo" src="img/pokelogo.jpg" />
+      <nav class="searchBack">
+        <div id="boxNav">
+        <p id="order">Order by:</p>
+          <h1 id="showS" value="showS"> </h1>
+
+            <button id="A-Z" value="A-Z"> A-Z </button>
+            <button id="Z-A"value="Z-A"> Z-A </button>
+        </div>
+
+              <form>
+                <select  id="lista" name ="type" class="filter" Change="filter" </select>
+                  <option value="0">Filter by type </option>
+                  <option value ="fire"> fire </option>
+                  <option value ="grass"> grass </option>
+                  <option value = "poison"> poison </option>
+                  <option value = "flying"> flying </option>
+                  <option value ="water"> water </option>
+                  <option value = "bug"> bug </option>
+                  <option value = "normal"> normal </option>
+                  <option value ="electric"> electric </option>
+                  <option value = "ground"> ground </option>
+                  <option value = "fighting"> fighting </option>
+                  <option value ="psychic"> psychic </option>
+                  <option value = "ice"> ice </option>
+                  <option value = "rock"> rock </option>
+                  <option value ="dragon"> dragon </option>
+                  <option value = "fairy"> fairy </option>
+                  <option value = "steel"> steel </option>
+                  <option value ="dark"> dark </option>
+
+                </select>
+             </form>
+
+            <div id="boxGen">
+              <h2 id="kanto"> </h2>
+              <h2 id="johto"> </h2>
+            </div>
+
+          <input type="button" onclick="history.go(0)" id="back" value="back to home">
+
+      </nav>
+    </header>
+
+    <main>
+      <div id="root"></div>
+    </main>
+    <footer>
+      <div id="boxFoo">
+        <p id="copyR">
+         <br> ©️ All Rights Reserved 2021. <br>
+          Laboratoria by Claudia Piñas / Susana García <br>
+          All Rights Reserved. <br>
+          <img id="pikachu" src="img/pikachu.png"/>
+         </p>
+
+      </div>
+    </footer>
     <script src="main.js" type="module"></script>
   </body>
+
+
 </html>
