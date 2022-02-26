@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers 15</title>
+  <meta name="viewport" content="width=device-width, user scalable=no, initial-scale=1.0
+  maximum-scale=1.o, minimum-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+  
+  <!--<div class="container"> -->
+    <header> Rick and Morty Universe
+      <img id="logo" src="./data/imagenes/Mask Group.png" alt="logo">
+    </header>
+    <nav>
+      <label><h2>Try our filter action on the show characters</h2></label>
+    </nav>   
+      <div id="selectors">
+        <!--<label>Status</label>-->
+        <select id="status">
+          <option disabled selected>Status</option>
+          <option>Alive</option>
+          <option>Dead</option>
+          <option>unknown</option>
+        </select>
+        <!--<label>Gender</label>-->
+        <select id="gender">
+          <option disabled selected>Gender</option>
+          <option>Female</option>
+          <option>Male</option>
+          <option>unknown</option>
+        </select>
+        <!--<label>Species</label>-->
+        <select id="species">
+          <option disabled selected>Species</option>
+          <option>Human</option>
+          <option>Alien</option>
+          <option>Humanoid</option>
+          <option>Animal</option>
+          <option>Robot</option>
+          <option>Vampire</option>
+          <option>Mytholog</option>
+          <option>Cronenberg</option>
+          <option>unknown</option>
+        </select>
+        <!--<label>Sort Order</label>-->
+        <select id="order">
+          <option disabled selected>Sort Order</option>
+          <option>A-Z</option>
+          <option>Z-A</option>
+        </select>
+      </div>
+      <input type= "text" id="input" placeholder= "shearch" />
+      <button id="buscar">Buscar</button>
+    
+    <main>
+      <div id="filtrado"></div>
+      <div id="root"></div>
+      <script src="main.js" type="module"></script>
+    </main>
+  <!--</div> -->
+</body>
+
 </html>
